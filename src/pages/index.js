@@ -1,21 +1,34 @@
 import React from "react"
-import { Link } from "gatsby"
+import {Stacks, Tools, SelectedProjects, BlogList} from "../utils/data"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Hero from "../components/hero"
+import About from "../components/about"
+import Skills from "../components/skills"
+import Projects from "../components/projects"
+import Blogs from "../components/blogs"
+import MessageButton from "../components/contact/button"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+
+const IndexPage = ({location}) => {
+
+  const [ stacks ] = Stacks();
+  const [ tools ] = Tools();
+  const [ projects ] = SelectedProjects();
+  const [ blogs ] = BlogList();
+
+  return(
+    <Layout location={location}>
+      <SEO title="Front-end Developer" />
+      <Hero />
+      <About />
+      <Skills stacks={stacks} tools={tools}/>
+      <Projects projects={projects}/>
+      <Blogs blogs={blogs}/>
+      <MessageButton location={location} />
+    </Layout>
+  )
+}
 
 export default IndexPage

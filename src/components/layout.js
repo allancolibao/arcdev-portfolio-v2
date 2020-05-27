@@ -1,48 +1,60 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React from "react"
+import React, {useEffect, useState}from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from "@emotion/styled"
+import tw from 'twin.macro'
 
 import Header from "./header"
-import "./layout.css"
+import Footer from "../components/footer"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
+
+  const [scrolling, setScrolling] = useState(false);
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
-          title
+          menuLinks {
+            name
+            link
+          }
         }
       }
     }
   `)
 
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', () => handleScroll)
+    }
+  }, [])
+
+  const handleScroll = () => {
+    window.scrollY > 850 ? setScrolling(true) : setScrolling(false)
+  }
+
+  if (typeof window !== "undefined") {
+    require("smooth-scroll")('a[href*="#"]')
+  }
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <Header menuLinks={data.site.siteMetadata.menuLinks} 
+              location={location}  
+              scrolling={scrolling}
+      />
+      <Main>{children}</Main>
+      <Footer />
     </>
   )
 }
+
+const Main = styled.main`
+    ${tw`container mx-auto w-full px-4 md:px-0`}
+`
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
