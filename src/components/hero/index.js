@@ -18,7 +18,7 @@ const Hero = () => (
 )
 
 const Section = styled.section`
-    ${tw`flex items-center justify-center text-center mb-40 md:mb-56`}
+    ${tw`flex items-center justify-center text-center mb-40 md:mb-48 lg:mb-56`}
 `
 
 const StyledDiv = styled.div`
@@ -26,12 +26,12 @@ const StyledDiv = styled.div`
 `
 
 const Heading = styled.h1`
-    ${tw`text-2xl md:text-5xl font-bold md:font-bold`}
+    ${tw`text-2xl md:text-4xl lg:text-5xl font-bold`}
     color: #282828;
 `
 
 const SubHeading = styled.p`
-    ${tw`text-sm md:text-2xl font-normal py-2 md:py-5`}
+    ${tw`text-sm md:text-xl lg:text-2xl font-normal py-2 md:py-3 lg:py-5`}
     color: #9b9b9b
 `
 

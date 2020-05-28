@@ -20,7 +20,7 @@ const IndexPage = ({location}) => {
 
   return(
     <Layout location={location}>
-      <SEO title="Front-end Developer" />
+      <SEO title="Front-end Developer" bodyBackground="#ffffff"/>
       <Hero />
       <About />
       <Skills stacks={stacks} tools={tools}/>

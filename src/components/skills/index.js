@@ -7,19 +7,19 @@ import Star from "./star"
 
 const Skills = ({stacks, tools}) => (
     <Section id="skills">
-        <SectionTitle layout="pb-4 md:pb-10" text="Skills"/>
+        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="Skills"/>
         <SectionContent>
-            <div className="w-full md:w-1/2 mb-4 lg:mb-0">
+            <div className="w-full md:w-1/2 mb-4 mr-6 lg:mb-0">
                 <Heading layout="pb-1 md:pb-2" text="My Tech Stack"/>
                 {stacks ? stacks.map((stack, i) =>  
                     <Item key={i}>
-                        <Content layout="w-32"  text={stack.name}/>
+                        <Content layout="w-24 lg:w-32"  text={stack.name}/>
                         <Rating>
                             <Star count={10} rating={stack.value}/>
                         </Rating>
                     </Item>) : 
                     <Item>
-                        <Content layout="w-32"  text="Loading..."/>
+                        <Content layout="w-24 lg:w-32"  text="Loading..."/>
                         <Rating>
                             <Star count={10} rating={0}/>
                         </Rating>
@@ -30,13 +30,13 @@ const Skills = ({stacks, tools}) => (
                 <Heading layout="pb-1 md:pb-2" text="Design & Editing Tools"/>
                 {tools ? tools.map((tool, i) =>  
                     <Item key={i}>
-                        <Content layout="md:w-32"  text={tool.name}/>
+                        <Content layout="w-24 lg:w-32 whitespace-no-wrap"  text={tool.name}/>
                         <Rating>
                             <Star count={10} rating={tool.value}/>
                         </Rating>
                     </Item>) : 
                     <Item>
-                        <Content layout="md:w-32"  text="Loading..."/>
+                        <Content layout="w-24 lg:w-32"  text="Loading..."/>
                         <Rating>
                             <Star count={10} rating={0}/>
                         </Rating>
@@ -48,14 +48,14 @@ const Skills = ({stacks, tools}) => (
 )
 
 const Section = styled.section`
-    ${tw`mb-12 lg:mb-20`}
+    ${tw`mb-8 md:mb-10 lg:mb-20`}
 `
 
 const SectionContent = styled.div`
-    ${tw`block lg:flex`}
+    ${tw`block md:flex`}
 `
 const Item = styled.div`
-    ${tw`block lg:flex items-center pb-2`}
+    ${tw`block md:flex items-center pb-2`}
 `
 
 const Rating = styled.div`

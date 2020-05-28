@@ -8,8 +8,8 @@ const Star = ({count, rating}) => (
     <>
         {[...Array(count)].map((star, i) => 
             (rating <= i ? 
-                <StartLine  key={i} className="w-5 md:w-8 h-auto md:py-1 lg:py-2"/> : 
-                <StarFill  key={i} className="w-5 md:w-8 h-auto md:py-1 lg:py-2"/> 
+                <StartLine  key={i} className="w-5 md:w-6 lg:w-8 h-auto md:py-1 lg:py-2"/> : 
+                <StarFill  key={i} className="w-5 md:w-6 lg:w-8 h-auto md:py-1 lg:py-2"/> 
             )
         )}
     </>

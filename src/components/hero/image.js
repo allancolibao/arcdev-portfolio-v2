@@ -17,7 +17,7 @@ const Image = () => {
   `)
 
   return <Img fluid={data.file.childImageSharp.fluid} 
-              className="rounded-full border-4 md:border-8 border-gray-300 m-auto w-32 md:w-full" 
+              className="rounded-full border-4 md:border-8 border-gray-300 m-auto w-24 md:w-40 lg:w-full" 
               style={borderStyle}
               alt="Allan Colibao"
           />

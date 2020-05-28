@@ -38,7 +38,9 @@ const Button = styled.button`
         bottom-0 
         shadow-xl
         mb-12
-        mr-4 
+        mr-4
+        md:mr-8
+        md:mb-16
         lg:mb-10 
         lg:mr-24 
         right-0 
@@ -58,7 +60,9 @@ const CloseButton = styled.button`
         bottom-0 
         shadow-xl 
         mb-12
-        mr-4 
+        mr-4
+        md:mr-8
+        md:mb-16
         lg:mb-10 
         lg:mr-24
         right-0 

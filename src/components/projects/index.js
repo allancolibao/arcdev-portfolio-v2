@@ -9,12 +9,12 @@ import Loader from "../loader"
 
 const Project = ({projects}) => (
     <Section id="projects">
-        <SectionTitle layout="pb-4 md:pb-10" text="Projects"/>
+        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="Projects"/>
         <SectionContent>
             <Grid>
                 {projects ? projects.map((project, i) => 
                 <Card key={i}>
-                    <BlkHeading layout="mb-2" text={project.title}/>
+                    <BlkHeading layout="mb-1 md:mb-2" text={project.title}/>
                     <Content layout="mb-4" text={project.description}/>
                     {project.tags.map((tag, i) =>
                         <div key={i} className="inline-block">
@@ -41,7 +41,7 @@ const Project = ({projects}) => (
 
 
 const Section = styled.section`
-    ${tw`mb-12 lg:mb-20`}
+    ${tw`mb-8 md:mb-10 lg:mb-20`}
 `
 
 const SectionContent = styled.div`
@@ -53,7 +53,7 @@ const Grid = styled.div`
 `
 
 const Card = styled.div`
-    ${tw`relative overflow-hidden p-4 md:p-6 shadow-lg md:shadow-xl rounded-lg `}
+    ${tw`relative overflow-hidden p-3 md:p-5 lg:p-6 shadow-lg md:shadow-xl rounded-lg `}
     min-height: 320px;
 `
 

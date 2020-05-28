@@ -10,19 +10,19 @@ import LinkedIn from "../images/svgs/linked-in.svg";
 const SocialIcon = () => (
     <>
         <Link href="https://www.instagram.com/allancolibao" target="blank">
-            <Instagram className="inline-block w-8 md:w-16 px-1 md:px-2 h-auto" />
+            <Instagram className="inline-block w-8 md:w-16 px-1 md:px-3 lg:px-2 h-auto" />
         </Link>
         <Link href="https://twitter.com/allancolibao" target="blank">
-            <Twitter className="inline-block w-8 md:w-16 px-1 md:px-2 h-auto" />
+            <Twitter className="inline-block w-8 md:w-16 px-1 md:px-3 lg:px-2 h-auto" />
         </Link>
         <Link href="https://www.behance.net/arcolibao" target="blank">
-            <Behance className="inline-block w-8 md:w-16 px-1 md:px-2 h-auto" />
+            <Behance className="inline-block w-8 md:w-16 px-1 md:px-3 lg:px-2 h-auto" />
         </Link>
         <Link href="https://github.com/allancolibao" target="blank">
-            <Github className="inline-block w-8 md:w-16 px-1 md:px-2 h-auto" />
+            <Github className="inline-block w-8 md:w-16 px-1 md:px-3 lg:px-2 h-auto" />
         </Link>
         <Link href="https://www.linkedin.com/in/allan-colibao-635902151" target="blank">
-            <LinkedIn className="inline-block w-8 md:w-16 px-1 md:px-2 h-auto" />
+            <LinkedIn className="inline-block w-8 md:w-16 px-1 md:px-3 lg:px-2 h-auto" />
         </Link>
     </>
 )

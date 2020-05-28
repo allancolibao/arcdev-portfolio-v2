@@ -9,13 +9,13 @@ import Loader from "../loader"
 
 const Blogs = ({blogs}) => (
     <Section id="blogs">
-        <SectionTitle layout="pb-4 md:pb-10" text="Blogs"/>
+        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="Blogs"/>
         <SectionContent>
             <Grid>
                 {blogs ? blogs.map((blog, i) => 
                     <Card key={i}>
                         <Bookmark className="absolute top-0 left-0 w-16 md:w-24 h-auto"/>
-                        <BlkHeading layout="mb-2" text={blog.title}/>
+                        <BlkHeading layout="mb-1 md:mb-2" text={blog.title}/>
                         <Content layout="mb-4" text={blog.description}/>
                         <View>
                             <Link to={`/${blog.slug}`}>
@@ -32,7 +32,7 @@ const Blogs = ({blogs}) => (
 
 
 const Section = styled.section`
-    ${tw`mb-24`}
+    ${tw`mb-8 md:mb-10 lg:mb-20`}
 `
 
 const SectionContent = styled.div`
@@ -44,7 +44,7 @@ const Grid = styled.div`
 `
 
 const Card = styled.div`
-    ${tw`relative overflow-hidden pl-16 md:pl-24 pr-4 md:pr-6 py-4 md:py-6 shadow-lg md:shadow-xl rounded-lg`}
+    ${tw`relative overflow-hidden pl-16 md:pl-24 pr-3 md:pr-5 lg:pr-6 py-3 md:py-5 lg:py-6 shadow-lg md:shadow-xl rounded-lg`}
     min-height: 320px;
 `
 

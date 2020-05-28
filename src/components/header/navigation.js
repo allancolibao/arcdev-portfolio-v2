@@ -16,7 +16,7 @@ const Navigation = ({lists}) => (
 )
 
 const NavList = styled.div`
-    ${tw`hidden md:flex items-center`}
+    ${tw`hidden lg:flex items-center`}
 `
 
 export default Navigation

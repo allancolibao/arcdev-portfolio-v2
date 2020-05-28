@@ -62,7 +62,7 @@ const Contact = ({ location }) => {
     
     return (
         <>
-        <SEO title="Contact" />
+        <SEO title="Contact" bodyBackground="#6f36bc" />
         <MainDiv>
             <Notifications />
             <MessageButton location={location}/>
@@ -133,8 +133,7 @@ const fadeIn = keyframes`
 `
 
 const MainDiv = styled.div`
-    ${tw`w-full h-screen`}
-    background-color: #6f36bc
+    ${tw`w-full mb-6 md:mb-0`}
 `
 
 const Heading = styled.h1`
