@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
 import tw from 'twin.macro'
-import { withPrefix } from "gatsby"
 import { css, keyframes } from '@emotion/core'
 
 import Navigation from "./navigation"
@@ -9,11 +8,7 @@ import Logo from "./logo"
 import ToggleSwitch from "../toggleSwitch"
 
 
-const Header = ({menuLinks, location, scrolling}) => {
-
-  const isHomepage = location.pathname === withPrefix("/")
-
-  return(
+const Header = ({ menuLinks, location, scrolling, isHomepage }) => (
     <Nav  id="home" css={scrolling ? sticky : "" }>
       <Div>
         <Logo />
@@ -23,8 +18,7 @@ const Header = ({menuLinks, location, scrolling}) => {
         </div>
       </Div>
     </Nav>
-  )
-}
+)
 
 const fadeIn = keyframes`
   0% {

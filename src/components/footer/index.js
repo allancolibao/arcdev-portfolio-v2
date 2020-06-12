@@ -5,7 +5,7 @@ import tw from 'twin.macro'
 import SocialIcon from "../social"
 import SlantBackground from "../../images/svgs/slant-bg.svg"
 
-const Footer = () => (
+const Footer = ({ isHomepage }) => (
     <Section>
         <SlantBackground className="w-full h-auto z-0" />
         <SectionContent>
@@ -18,7 +18,7 @@ const Footer = () => (
 )
 
 const Section = styled.section`
-    ${tw`bg-no-repeat relative`}
+    ${tw`bg-no-repeat relative mb-12 md:mb-16 lg:mb-0`}
 `
 
 const SectionContent = styled.div`
@@ -28,13 +28,13 @@ const SectionContent = styled.div`
         w-full 
         m-auto 
         bottom-0
-        mb-1
-        md:mb-4
+        mb-2
+        md:mb-6
         z-20`}
 `
 
 const WhiteIcon = styled.div`
-    ${tw`mb-6 md:mb-10`}
+    ${tw`mb-4 md:mb-8 lg:mb-10`}
     filter: brightness(0) invert(1);
 `
 

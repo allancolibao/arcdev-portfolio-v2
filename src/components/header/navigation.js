@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 
 import Link from "./link"
 
-const Navigation = ({lists}) => (
+const Navigation = ({ lists }) => (
     <NavList>
         {lists.map((list, index) => <Link
             to={list.link}

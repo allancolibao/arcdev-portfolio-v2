@@ -6,9 +6,9 @@ import { keyframes } from '@emotion/core'
 const  Loader = () => (
     <MainDiv>
         <LoaderDiv>
-            <span className="rounded-full bg-white h-4 w-4 mx-1 inline-block"></span>
-            <span className="rounded-full bg-white h-4 w-4 mx-1 inline-block"></span>
-            <span className="rounded-full bg-white h-4 w-4 mx-1 inline-block"></span>
+            <span className="rounded-full bg-white h-2 w-2 md:h-3 md:w-3 lg:h-4 lg:w-4 mx-1 inline-block"></span>
+            <span className="rounded-full bg-white h-2 w-2 md:h-3 md:w-3 lg:h-4 lg:w-4 mx-1 inline-block"></span>
+            <span className="rounded-full bg-white h-2 w-2 md:h-3 md:w-3 lg:h-4 lg:w-4 mx-1 inline-block"></span>
         </LoaderDiv>
     </MainDiv>
 )   

@@ -1,15 +1,17 @@
 import React, {useEffect, useState}from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, withPrefix } from "gatsby"
 import styled from "@emotion/styled"
 import tw from 'twin.macro'
 
 import Header from "./header"
-import Footer from "../components/footer"
+import BottomNavigation from "./bottom-nav"
+import Footer from "./footer"
 
 const Layout = ({ children, location }) => {
 
   const [scrolling, setScrolling] = useState(false);
+  const isHomepage = location.pathname === withPrefix("/")
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -43,11 +45,12 @@ const Layout = ({ children, location }) => {
   return (
     <>
       <Header menuLinks={data.site.siteMetadata.menuLinks} 
-              location={location}  
+              isHomepage={isHomepage}  
               scrolling={scrolling}
       />
       <Main>{children}</Main>
-      <Footer />
+      <BottomNavigation />
+      <Footer isHomepage={isHomepage} />
     </>
   )
 }
