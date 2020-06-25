@@ -9,7 +9,7 @@ const Link = ({name, to}) => (
 )
 
 const MenuLink = styled.a`
-    ${tw`inline-block mr-12 font-semibold text-base`}
+    ${tw`inline-block mr-12 font-medium text-base`}
     color: #606060
 `
 

@@ -6,7 +6,7 @@ import SocialIcon from "../social"
 import SlantBackground from "../../images/svgs/slant-bg.svg"
 
 const Footer = ({ isHomepage }) => (
-    <Section>
+    <Section className={isHomepage ? 'mb-12 md:mb-16': ''}>
         <SlantBackground className="w-full h-auto z-0" />
         <SectionContent>
             <WhiteIcon>
@@ -18,7 +18,7 @@ const Footer = ({ isHomepage }) => (
 )
 
 const Section = styled.section`
-    ${tw`bg-no-repeat relative mb-12 md:mb-16 lg:mb-0`}
+    ${tw`bg-no-repeat relative lg:mb-0`}
 `
 
 const SectionContent = styled.div`

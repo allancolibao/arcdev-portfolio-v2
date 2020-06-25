@@ -6,9 +6,13 @@ import { SectionTitle, Heading, Content } from "../text"
 import Star from "./star"
 
 const Skills = ({stacks, tools}) => (
-    <Section id="skills">
-        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="Skills"/>
-        <SectionContent>
+    <Section id="skill">
+        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="Skill"/>
+        <SectionContent 
+            data-sal="fade"
+            data-sal-duration="900"
+            data-sal-delay="300"
+            data-sal-easing="ease">
             <div className="w-full md:w-1/2 mb-4 mr-6 lg:mb-0">
                 <Heading layout="pb-1 md:pb-2" text="My Tech Stack"/>
                 {stacks ? stacks.map((stack, i) =>  
@@ -27,11 +31,11 @@ const Skills = ({stacks, tools}) => (
                 }
             </div>
             <div className="w-full md:w-1/2">
-                <Heading layout="pb-1 md:pb-2" text="Design & Editing Tools"/>
+                <Heading layout="pb-1 md:pb-2" text="Design &amp; Editing Tools"/>
                 {tools ? tools.map((tool, i) =>  
                     <Item key={i}>
                         <Content layout="w-24 lg:w-32 whitespace-no-wrap"  text={tool.name}/>
-                        <Rating>
+                        <Rating >
                             <Star count={10} rating={tool.value}/>
                         </Rating>
                     </Item>) : 

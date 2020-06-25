@@ -5,12 +5,15 @@ import tw from 'twin.macro'
 import { SectionTitle, BlkHeading, Content, Tagging, LinkText } from "../text"
 import Eye from "../../images/svgs/eye.svg"
 import Git from "../../images/svgs/git.svg"
-import Loader from "../loader"
 
 const Project = ({projects}) => (
-    <Section id="projects">
-        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="Projects"/>
-        <SectionContent>
+    <Section id="project">
+        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="Project"/>
+        <SectionContent
+            data-sal="fade"
+            data-sal-duration="900"
+            data-sal-delay="300"
+            data-sal-easing="ease">
             <Grid>
                 {projects ? projects.map((project, i) => 
                 <Card key={i}>
@@ -32,7 +35,7 @@ const Project = ({projects}) => (
                         </Align>
                     </View>
                 </Card>
-                ) : <Loader />
+                ) : ""
             }
             </Grid>
         </SectionContent>

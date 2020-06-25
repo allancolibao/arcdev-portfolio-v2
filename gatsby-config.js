@@ -15,16 +15,16 @@ module.exports = {
           link:'#about'
         },
         {
-          name:'Skills',
-          link:'#skills'
+          name:'Skill',
+          link:'#skill'
         },
         {
-          name:'Projects',
-          link:'#projects'
+          name:'Project',
+          link:'#project'
         },
         {
-          name:'Blogs',
-          link:'#blogs'
+          name:'Blog',
+          link:'#blog'
         },
       ]
   },
@@ -92,6 +92,16 @@ module.exports = {
         },
       },
     `gatsby-transformer-remark`,
-    `gatsby-plugin-transition-link`
+    {
+      resolve: `gatsby-plugin-scroll-reveal`,
+      options: {
+          threshold: 0.2,
+          once: true, 
+          disable: false,
+          rootMargin: '0% 50%',
+          
+      }
+    },
+    `gatsby-plugin-transition-link`,
   ],
 }

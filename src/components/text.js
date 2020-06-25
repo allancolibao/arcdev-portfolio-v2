@@ -2,7 +2,13 @@ import React from "react"
 import styled from "@emotion/styled"
 import tw from 'twin.macro'
 
-const SectionTitle = ({text, layout}) => <Title className={layout}>{text}</Title>
+const SectionTitle = ({text, layout}) => <Title className={layout}  
+                                                data-sal="slide-right"
+                                                data-sal-duration="900"
+                                                data-sal-delay="300"
+                                                data-sal-easing="ease">
+                                            {text}
+                                        </Title>
 
 const Heading = ({text, layout}) => <Head className={layout}>{text}</Head>
 

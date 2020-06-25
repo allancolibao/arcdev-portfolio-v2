@@ -12,8 +12,12 @@ import Phone from "../../images/svgs/phone.svg";
 const About = () => (
     <Section id="about">
         <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="About me"/>
-        <SectionContent>
-            <div className="w-full xl:w-3/4">
+        <SectionContent> 
+            <div className="w-full xl:w-3/4" 
+                data-sal="fade"
+                data-sal-duration="900"
+                data-sal-delay="300"
+                data-sal-easing="ease">
                 <Heading layout="pb-1 md:pb-2" text="Who Am I"/>
                 <Content layout="pb-3 md:pb-4 lg:pb-6" text="Simply dummy text of the printing and 
                 typesetting industry. Lorem Ipsum has been the industry's standard 
@@ -61,7 +65,11 @@ const About = () => (
                 </ContactInfo>
             </div>
             <div className="hidden xl:block xl:w-1/4">
-                <Human />
+                <Human  data-sal="slide-left"
+                        data-sal-duration="900"
+                        data-sal-delay="300"
+                        data-sal-easing="ease"
+                />
             </div>
         </SectionContent>
     </Section>

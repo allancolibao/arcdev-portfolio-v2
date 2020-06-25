@@ -5,12 +5,16 @@ import tw from 'twin.macro'
 
 import { SectionTitle, BlkHeading, Content} from "../text"
 import Bookmark from "../../images/svgs/bookmark.svg"
-import Loader from "../loader"
+
 
 const Blogs = ({blogs}) => (
-    <Section id="blogs">
-        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="Blogs"/>
-        <SectionContent>
+    <Section id="blog">
+        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="Blog"/>
+        <SectionContent
+            data-sal="fade"
+            data-sal-duration="900"
+            data-sal-delay="300"
+            data-sal-easing="ease">
             <Grid>
                 {blogs ? blogs.map((blog, i) => 
                     <Card key={i}>
@@ -23,7 +27,7 @@ const Blogs = ({blogs}) => (
                             </Link>
                         </View>
                     </Card>
-                    ) : <Loader />
+                    ) : ""
                 }
             </Grid>
         </SectionContent>

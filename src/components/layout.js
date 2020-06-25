@@ -49,7 +49,7 @@ const Layout = ({ children, location }) => {
               scrolling={scrolling}
       />
       <Main>{children}</Main>
-      <BottomNavigation />
+      {isHomepage ? <BottomNavigation /> : ''}
       <Footer isHomepage={isHomepage} />
     </>
   )

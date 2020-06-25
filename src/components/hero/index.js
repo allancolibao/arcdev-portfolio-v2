@@ -9,13 +9,33 @@ const Hero = () => (
     <Section>
         <StyledDiv>
             <Image/>
-            <SubHeading>Hi, I'm</SubHeading>
-            <Heading>Allan Reyes Colibao</Heading>
-            <SubHeading>Front-end Software Engineer</SubHeading>
+            <SubHeading data-sal="slide-right"
+                        data-sal-duration="900"
+                        data-sal-delay="500"
+                        data-sal-easing="ease"
+            >
+                Hey, I'm
+            </SubHeading>
+            <Heading 
+                        data-sal="slide-left"
+                        data-sal-duration="900"
+                        data-sal-delay="500"
+                        data-sal-easing="ease"
+            >
+                Allan Reyes Colibao
+            </Heading>
+            <SubHeading data-sal="slide-right"
+                        data-sal-duration="900"
+                        data-sal-delay="500"
+                        data-sal-easing="ease"
+            >
+                Front-end Software Engineer
+            </SubHeading>
             <SocialIcon />
         </StyledDiv>
     </Section>
 )
+
 
 const Section = styled.section`
     ${tw`flex items-center justify-center text-center mb-40 md:mb-48 lg:mb-56`}
@@ -26,8 +46,8 @@ const StyledDiv = styled.div`
 `
 
 const Heading = styled.h1`
-    ${tw`text-2xl md:text-4xl lg:text-5xl font-bold`}
-    color: #282828;
+    ${tw`text-2xl md:text-4xl lg:text-6xl font-bold md:font-black`}
+    color: #6f36bc;
 `
 
 const SubHeading = styled.p`
