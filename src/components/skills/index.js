@@ -6,8 +6,8 @@ import { SectionTitle, Heading, Content } from "../text"
 import Star from "./star"
 
 const Skills = ({stacks, tools}) => (
-    <Section id="skill">
-        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="Skill"/>
+    <Section id="skills">
+        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="What Can I Do"/>
         <SectionContent 
             data-sal="fade"
             data-sal-duration="900"

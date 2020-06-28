@@ -9,7 +9,7 @@ import Bookmark from "../../images/svgs/bookmark.svg"
 
 const Blogs = ({blogs}) => (
     <Section id="blog">
-        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="Blog"/>
+        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="My Blog"/>
         <SectionContent
             data-sal="fade"
             data-sal-duration="900"

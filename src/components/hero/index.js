@@ -14,7 +14,7 @@ const Hero = () => (
                         data-sal-delay="500"
                         data-sal-easing="ease"
             >
-                Hey, I'm
+                Hi, I'm
             </SubHeading>
             <Heading 
                         data-sal="slide-left"
@@ -29,7 +29,7 @@ const Hero = () => (
                         data-sal-delay="500"
                         data-sal-easing="ease"
             >
-                Front-end Software Engineer
+                Front-end Software Developer
             </SubHeading>
             <SocialIcon />
         </StyledDiv>
@@ -38,7 +38,7 @@ const Hero = () => (
 
 
 const Section = styled.section`
-    ${tw`flex items-center justify-center text-center mb-40 md:mb-48 lg:mb-56`}
+    ${tw`flex items-center justify-center text-center h-screen`}
 `
 
 const StyledDiv = styled.div`
@@ -46,14 +46,13 @@ const StyledDiv = styled.div`
 `
 
 const Heading = styled.h1`
-    ${tw`text-2xl md:text-4xl lg:text-6xl font-bold md:font-black`}
-    color: #6f36bc;
+    ${tw`text-2xl md:text-4xl lg:text-5xl font-bold md:font-black`}
+    color: #874cd9;
 `
 
 const SubHeading = styled.p`
     ${tw`text-sm md:text-xl lg:text-2xl font-normal py-2 md:py-3 lg:py-5`}
     color: #9b9b9b
 `
-
 export default Hero
   

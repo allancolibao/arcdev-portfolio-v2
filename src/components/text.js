@@ -24,7 +24,7 @@ const LinkText = ({text, layout}) => <Label className={layout}>{text}</Label>
 
 const Title = styled.h2`
     ${tw`text-lg md:text-2xl lg:text-4xl font-bold`}
-    color: #282828
+    color: #282828;
 `
 
 const Head = styled.h5`

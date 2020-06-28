@@ -35,7 +35,7 @@ const Layout = ({ children, location }) => {
   }, [])
 
   const handleScroll = () => {
-    window.scrollY > 850 ? setScrolling(true) : setScrolling(false)
+    window.scrollY > 0 ? setScrolling(true) : setScrolling(false)
   }
 
   if (typeof window !== "undefined") {

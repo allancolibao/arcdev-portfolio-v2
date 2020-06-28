@@ -8,8 +8,8 @@ import Logo from "./logo"
 import ToggleSwitch from "../toggleSwitch"
 
 
-const Header = ({ menuLinks, location, scrolling, isHomepage }) => (
-    <Nav  id="home" css={scrolling ? sticky : "" }>
+const Header = ({ menuLinks, scrolling, isHomepage }) => (
+    <Nav  id="home" css={scrolling ? sticky : fixed }>
       <Div>
         <Logo />
         {isHomepage ? <Navigation lists={menuLinks}/> : "" }
@@ -41,7 +41,12 @@ const sticky = css`
   animation: ${fadeIn} ease-in 1;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px -36px 55px -2px rgba(0,0,0,0.51);
+`
+
+const fixed = css`
+  position: fixed;
+  top: 0;
 `
 
 const Nav = styled.nav`

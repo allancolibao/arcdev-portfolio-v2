@@ -15,12 +15,12 @@ module.exports = {
           link:'#about'
         },
         {
-          name:'Skill',
-          link:'#skill'
+          name:'Skills',
+          link:'#skills'
         },
         {
-          name:'Project',
-          link:'#project'
+          name:'Projects',
+          link:'#projects'
         },
         {
           name:'Blog',

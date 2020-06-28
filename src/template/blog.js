@@ -36,7 +36,7 @@ const Template = ({data, location}) => {
 }
 
 const BackButton = styled.button`
-    ${tw`mb-4 
+    ${tw`mt-16 mb-4 
       text-purple-600 
       text-sm
       md:text-base

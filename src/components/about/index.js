@@ -11,22 +11,17 @@ import Phone from "../../images/svgs/phone.svg";
 
 const About = () => (
     <Section id="about">
-        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="About me"/>
+        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="Who Am I"/>
         <SectionContent> 
             <div className="w-full xl:w-3/4" 
                 data-sal="fade"
                 data-sal-duration="900"
                 data-sal-delay="300"
                 data-sal-easing="ease">
-                <Heading layout="pb-1 md:pb-2" text="Who Am I"/>
-                <Content layout="pb-3 md:pb-4 lg:pb-6" text="Simply dummy text of the printing and 
-                typesetting industry. Lorem Ipsum has been the industry's standard 
-                dummy text ever since the 1500s, when an unknown printer took 
-                a galley of type and scrambled it to make a type specimen book. 
-                It has survived not only five centuries, but also the leap into 
-                electronic typesetting, remaining essentially unchanged. It has 
-                survived not only five centuries, but also the leap into electronic 
-                typesetting, remaining essentially unchanged."/>
+                <Heading layout="pb-1 md:pb-2" text="Hello There!"/>
+                <Content layout="pb-3 md:pb-4 lg:pb-6" 
+                text="My name is Allan Reyes Colibao and I am a design-oriented front-end developer who loves to build interactive web applications."
+                />
 
                 <Content layout="pb-3 md:pb-4 lg:pb-6" text="The is simply dummy text of the printing and 
                 typesetting  industry. LoremIpsum has been the industry's standard dummy 
@@ -35,12 +30,9 @@ const About = () => (
                 centuries, but also the leap into electronic typesetting, remaining essentially 
                 unchanged."/>
 
-                <Content layout="pb-4 md:pb-6 lg:pb-10" text="Simply dummy text of the printing and 
-                typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                text ever since the 1500s, when an unknown printer took a galley of type 
-                and scrambled it to make a type specimen book."/>
+                <Content layout="pb-4 md:pb-6 lg:pb-10" text="When I'm not coding"/>
 
-                <Heading layout="pb-1 md:pb-2" text="Work Experience"/>
+                <Heading layout="pb-1 md:pb-2" text="Experience"/>
                 <SubHeading layout="pb-1 md:pb-2" text="Project Assistant III (Web Developer)"/>
                 <Content text="2019 - Present"/>
                 <Content layout="pb-4 md:pb-6 lg:pb-10" text="Department of Science and Technology - 
@@ -61,7 +53,7 @@ const About = () => (
                 </ContactInfo>
                 <ContactInfo>
                     <Phone className="inline-block w-4 md:w-5 lg:w-6 h-auto mr-1 md:mr-2"/> 
-                    <Content layout="inline-block" text="09667981133"/>
+                    <Content layout="inline-block" text="+63 966 798 1133"/>
                 </ContactInfo>
             </div>
             <div className="hidden xl:block xl:w-1/4">

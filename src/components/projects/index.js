@@ -7,8 +7,8 @@ import Eye from "../../images/svgs/eye.svg"
 import Git from "../../images/svgs/git.svg"
 
 const Project = ({projects}) => (
-    <Section id="project">
-        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="Project"/>
+    <Section id="projects">
+        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="Featured Work"/>
         <SectionContent
             data-sal="fade"
             data-sal-duration="900"
