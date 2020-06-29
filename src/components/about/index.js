@@ -23,12 +23,7 @@ const About = () => (
                 text="My name is Allan Reyes Colibao and I am a design-oriented front-end developer who loves to build interactive web applications."
                 />
 
-                <Content layout="pb-3 md:pb-4 lg:pb-6" text="The is simply dummy text of the printing and 
-                typesetting  industry. LoremIpsum has been the industry's standard dummy 
-                text ever since the 1500s, when an unknown printer took a galley of type 
-                and scrambled it to make a type specimen book. It has survived not only five 
-                centuries, but also the leap into electronic typesetting, remaining essentially 
-                unchanged."/>
+                <Content layout="pb-3 md:pb-4 lg:pb-6" text="Let's turn your ideas into real-world applications."/>
 
                 <Content layout="pb-4 md:pb-6 lg:pb-10" text="When I'm not coding"/>
 
@@ -69,7 +64,7 @@ const About = () => (
 
 
 const Section = styled.section`
-    ${tw`mb-8 md:mb-10 lg:mb-20`}
+    ${tw`mb-8 md:mb-10 lg:mb-20 pt-16 md:pt-20`}
 `
 
 const SectionContent = styled.div`

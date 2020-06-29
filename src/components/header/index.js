@@ -50,7 +50,7 @@ const fixed = css`
 `
 
 const Nav = styled.nav`
-  ${tw`flex flex-wrap items-center justify-between px-4 sm:p-1 w-full z-10 bg-white`}
+  ${tw`flex flex-wrap items-center justify-between px-4 py-0 md:p-1 w-full z-10 bg-white`}
 `
 
 const Div = styled.div`

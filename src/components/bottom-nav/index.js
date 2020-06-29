@@ -35,7 +35,7 @@ const BottomNavigation = () => (
             </Link>
         </MenuLink>
         <MenuLink>
-            <Link href="#blogs">
+            <Link href="#blog">
                 <Blogs className="h-auto w-6 md:w-8 mx-auto" />
                 Blogs
             </Link>

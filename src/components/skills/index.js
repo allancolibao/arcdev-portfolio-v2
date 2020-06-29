@@ -52,7 +52,7 @@ const Skills = ({stacks, tools}) => (
 )
 
 const Section = styled.section`
-    ${tw`mb-8 md:mb-10 lg:mb-20`}
+    ${tw`mb-8 md:mb-10 lg:mb-20 pt-16 md:pt-20`}
 `
 
 const SectionContent = styled.div`
