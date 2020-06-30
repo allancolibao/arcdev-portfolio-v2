@@ -43,7 +43,7 @@ const SubHead = styled.h6`
 `
 
 const Paragraph = styled.p`
-    ${tw`text-xs md:text-sm lg:text-base font-normal`}
+    ${tw`text-xs md:text-sm lg:text-base font-normal leading-relaxed`}
     color: #606060
 `
 

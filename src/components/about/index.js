@@ -20,12 +20,19 @@ const About = () => (
                 data-sal-easing="ease">
                 <Heading layout="pb-1 md:pb-2" text="Hello There!"/>
                 <Content layout="pb-3 md:pb-4 lg:pb-6" 
-                text="My name is Allan Reyes Colibao and I am a design-oriented front-end developer who loves to build interactive web applications."
+                text="Are you searching for a talented developer with proven skills to 
+                develop a high-performance application? If so,  Let's turn your ideas 
+                into real-world applications. But first, Let me introduce myself, 
+                My name is Allan Reyes Colibao and I am a design-oriented Front-end Developer 
+                who loves to build interactive web applications."
                 />
 
-                <Content layout="pb-3 md:pb-4 lg:pb-6" text="Let's turn your ideas into real-world applications."/>
+                <Content layout="pb-3 md:pb-4 lg:pb-6"
+                text="I started"
+                />
 
-                <Content layout="pb-4 md:pb-6 lg:pb-10" text="When I'm not coding"/>
+                <Content layout="pb-4 md:pb-6 lg:pb-10" 
+                text="When I'm not coding"/>
 
                 <Heading layout="pb-1 md:pb-2" text="Experience"/>
                 <SubHeading layout="pb-1 md:pb-2" text="Project Assistant III (Web Developer)"/>
