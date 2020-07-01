@@ -28,7 +28,7 @@ const About = () => (
                 />
 
                 <Content layout="pb-3 md:pb-4 lg:pb-6"
-                text="I started"
+                text="Over a year I am working as a Web Developer, And as part of my role"
                 />
 
                 <Content layout="pb-4 md:pb-6 lg:pb-10" 
