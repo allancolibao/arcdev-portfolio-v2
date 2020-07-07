@@ -28,7 +28,12 @@ const About = () => (
                 />
 
                 <Content layout="pb-3 md:pb-4 lg:pb-6"
-                text="Over a year I am working as a Web Developer, And as part of my role"
+                text="Over a year, I am working as a Web Developer. And as part of my role, 
+                I was involved in developing an application providing efficient and effective 
+                means of data collection and management using technologies JavaScript and PHP. 
+                Now, I focus on front-end stuff as I love making design. I am a human who 
+                believes that the combination of art and writing efficient code is the key 
+                to become a better front-end developer."
                 />
 
                 <Content layout="pb-4 md:pb-6 lg:pb-10" 

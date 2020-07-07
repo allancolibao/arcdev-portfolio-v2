@@ -50,11 +50,11 @@ const fixed = css`
 `
 
 const Nav = styled.nav`
-  ${tw`flex flex-wrap items-center justify-between px-4 py-0 md:p-1 w-full z-10 bg-white`}
+  ${tw`px-4 py-0 md:px-8 md:py-1 w-full z-10 bg-white`}
 `
 
 const Div = styled.div`
-  ${tw`container mx-auto flex`}
+  ${tw`mx-auto flex`}
 `
 
 export default Header
