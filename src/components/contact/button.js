@@ -21,6 +21,7 @@ const MessageButton = ({ location }) => {
         :
         <AniLink cover bg="#6f36bc" direction="left" duration={1} to="/contact">
             <Button><Envelope className="w-full h-auto p-2"/></Button>
+            
         </AniLink> 
         }
        </>

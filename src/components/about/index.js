@@ -13,27 +13,23 @@ const About = () => (
     <Section id="about">
         <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="Who Am I"/>
         <SectionContent> 
-            <div className="w-full xl:w-3/4" 
+            <div className="w-full xl:w-3/4 xl:pr-16" 
                 data-sal="fade"
                 data-sal-duration="900"
                 data-sal-delay="300"
                 data-sal-easing="ease">
                 <Heading layout="pb-1 md:pb-2" text="Hello There!"/>
                 <Content layout="pb-3 md:pb-4 lg:pb-6" 
-                text="Are you searching for a talented developer with proven skills to 
-                develop a high-performance application? If so,  Let's turn your ideas 
-                into real-world applications. But first, Let me introduce myself, 
-                My name is Allan Reyes Colibao and I am a design-oriented Front-end Developer 
-                who loves to build interactive web applications."
+                text="My name is Allan Reyes Colibao. I am a design-oriented Front-end Developer 
+                who loves to build complex interactive web applications."
                 />
 
                 <Content layout="pb-3 md:pb-4 lg:pb-6"
                 text="Over a year, I am working as a Web Developer. And as part of my role, 
                 I was involved in developing an application providing efficient and effective 
                 means of data collection and management using technologies JavaScript and PHP. 
-                Now, I focus on front-end stuff as I love making design. I am a human who 
-                believes that the combination of art and writing efficient code is the key 
-                to become a better front-end developer."
+                Now, I focus on front-end stuff because I love to combine art and efficient code 
+                in building a product."
                 />
 
                 <Content layout="pb-4 md:pb-6 lg:pb-10" 

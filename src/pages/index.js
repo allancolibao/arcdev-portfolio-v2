@@ -22,10 +22,10 @@ const IndexPage = ({location}) => {
     <Layout location={location}>
       <SEO title="Front-end Developer" bodyBackground="#ffffff"/>
       <Hero />
-      <About />
-      <Skills stacks={stacks} tools={tools}/>
       <Projects projects={projects}/>
+      <Skills stacks={stacks} tools={tools}/>
       <Blogs blogs={blogs}/>
+      <About />
       <MessageButton location={location} />
     </Layout>
   )
