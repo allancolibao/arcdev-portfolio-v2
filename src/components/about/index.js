@@ -11,7 +11,7 @@ import Phone from "../../images/svgs/phone.svg";
 
 const About = () => (
     <Section id="about">
-        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="Who Am I"/>
+        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="About me"/>
         <SectionContent> 
             <div className="w-full xl:w-3/4 xl:pr-16" 
                 data-sal="fade"
@@ -25,11 +25,10 @@ const About = () => (
                 />
 
                 <Content layout="pb-3 md:pb-4 lg:pb-6"
-                text="Over a year, I am working as a Web Developer. And as part of my role, 
-                I was involved in developing an application providing efficient and effective 
-                means of data collection and management using technologies JavaScript and PHP. 
-                Now, I focus on front-end stuff because I love to combine art and efficient code 
-                in building a product."
+                text="Earlier in 2019,  I started working as a Web Developer. And as part of my role, 
+                I was involved in developing an application providing efficient and effective means 
+                of data collection and management using technologies JavaScript and PHP. Now, I focus 
+                on front-end stuff because I love to combine art and efficient code in building a product."
                 />
 
                 <Content layout="pb-4 md:pb-6 lg:pb-10" 
