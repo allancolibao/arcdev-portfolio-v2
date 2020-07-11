@@ -20,7 +20,7 @@ const Template = ({data, location}) => {
 
   return (
     <Layout location={location}>
-       <SEO title="Blog" bodyBackground="#ffffff"/>
+       <SEO title="Blog" bodyBackground="#211c42"/>
        <BackButton onClick={() => goBack()} >{"<< Go back"}</BackButton>
         <div className="blog-post-container">
             <div className="blog-post">

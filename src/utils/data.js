@@ -1,12 +1,12 @@
-import React from "react"
+import { useState, useEffect }from "react"
 import firebase from "gatsby-plugin-firebase"
 
 
 const Stacks = () => {
 
-    const [stacks, setStacks] = React.useState()
+    const [stacks, setStacks] = useState()
 
-    React.useEffect(() => {
+    useEffect(() => {
         firebase
         .firestore()
         .collection("/skills/stacks/lists")
@@ -25,9 +25,9 @@ const Stacks = () => {
 
 const Tools = () => {
     
-    const [tools, setTools] =  React.useState()
+    const [tools, setTools] =  useState()
 
-    React.useEffect(() => {
+    useEffect(() => {
         firebase
         .firestore()
         .collection("/skills/tools/lists")
@@ -46,9 +46,9 @@ const Tools = () => {
 
 const SelectedProjects = () => {
     
-    const [projects, setProjects] =  React.useState()
+    const [projects, setProjects] =  useState()
 
-    React.useEffect(() => {
+    useEffect(() => {
         firebase
         .firestore()
         .collection("/projects")
@@ -67,9 +67,9 @@ const SelectedProjects = () => {
 
 const BlogList = () => {
     
-    const [blogs, setBLogs] =  React.useState()
+    const [blogs, setBLogs] =  useState()
 
-    React.useEffect(() => {
+    useEffect(() => {
         firebase
         .firestore()
         .collection("/blogs")

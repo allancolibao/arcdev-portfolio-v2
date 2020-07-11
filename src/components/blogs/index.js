@@ -48,7 +48,7 @@ const Grid = styled.div`
 `
 
 const Card = styled.div`
-    ${tw`relative overflow-hidden pl-16 md:pl-24 pr-3 md:pr-5 lg:pr-6 py-3 md:py-5 lg:py-6 shadow-lg md:shadow-xl rounded-lg bg-white`}
+    ${tw`relative overflow-hidden pl-16 md:pl-24 pr-3 md:pr-5 lg:pr-6 py-3 md:py-5 lg:py-6 shadow-lg md:shadow-xl rounded-lg bg-purple-900`}
     min-height: 320px;
 `
 

@@ -7,7 +7,7 @@ const Image = () => {
     query {
       file(relativePath: { eq: "new-dp.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 250, quality:100) {
+          fluid(maxWidth: 500, quality:100) {
             ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluidLimitPresentationSize
           }
@@ -17,7 +17,7 @@ const Image = () => {
   `)
 
   return <Img fluid={data.file.childImageSharp.fluid} 
-              className="rounded-full border-2 md:border-4 border-gray-300 m-auto w-24 md:w-40 lg:w-full" 
+              className="border-2 md:border-4 border-gray-300 m-auto w-24 md:w-40 lg:w-full" 
               style={borderStyle}
               alt="Allan Colibao"
           />

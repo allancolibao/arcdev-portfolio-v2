@@ -87,15 +87,9 @@ const Button = styled.button`
         px-4 
         leading-tight 
         focus:outline-none
-        focus:border-purple-800`}
-    background-color: #361e66;
-    border: 1px solid #361e66;
-    &:hover {
-        background-color: #2d204f
-    }
-    &:focus {
-        background-color: #2d204f
-    }
+        focus:border-purple-800
+        bg-purple-600
+        hover:bg-purple-700`}
 `
 
 export {

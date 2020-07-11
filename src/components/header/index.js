@@ -5,7 +5,6 @@ import { css, keyframes } from '@emotion/core'
 
 import Navigation from "./navigation"
 import Logo from "./logo"
-import ToggleSwitch from "../toggleSwitch"
 
 
 const Header = ({ menuLinks, scrolling, isHomepage }) => (
@@ -14,7 +13,6 @@ const Header = ({ menuLinks, scrolling, isHomepage }) => (
         <Logo />
         {isHomepage ? <Navigation lists={menuLinks}/> : "" }
         <div>
-          <ToggleSwitch layout="w-6 sm:w-8"/>
         </div>
       </Div>
     </Nav>
@@ -50,7 +48,8 @@ const fixed = css`
 `
 
 const Nav = styled.nav`
-  ${tw`px-4 py-0 md:px-8 md:py-1 w-full z-10 bg-white`}
+  ${tw`px-4 py-0 md:px-8 py-2 md:py-3 w-full z-10`}
+  background-color:#211c42;
 `
 
 const Div = styled.div`

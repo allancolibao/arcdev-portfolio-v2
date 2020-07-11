@@ -27,12 +27,12 @@ const About = () => (
                 <Content layout="pb-3 md:pb-4 lg:pb-6"
                 text="Earlier in 2019,  I started working as a Web Developer. And as part of my role, 
                 I was involved in developing an application providing efficient and effective means 
-                of data collection and management using technologies JavaScript and PHP. Now, I focus 
-                on front-end stuff because I love to combine art and efficient code in building a product."
+                of data collection and management using technologies JavaScript and PHP."
                 />
 
                 <Content layout="pb-4 md:pb-6 lg:pb-10" 
-                text="When I'm not coding"/>
+                text="Now, I focus on front-end stuff because I love to combine art and efficient code in 
+                building a product. If you are interested in working on a project together, don't hesitate to get in touch."/>
 
                 <Heading layout="pb-1 md:pb-2" text="Experience"/>
                 <SubHeading layout="pb-1 md:pb-2" text="Project Assistant III (Web Developer)"/>
@@ -63,6 +63,7 @@ const About = () => (
                         data-sal-duration="900"
                         data-sal-delay="300"
                         data-sal-easing="ease"
+                        className="p-4"
                 />
             </div>
         </SectionContent>

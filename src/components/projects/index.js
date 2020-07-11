@@ -26,11 +26,11 @@ const Project = ({projects}) => (
                     )}
                     <View>
                         <Align href={project.url} target="blank">
-                            <Eye className="h-auto w-6 md:w-8 mr-1"/> 
+                            <Eye className="h-auto w-6 md:w-8 mr-1 text-purple-300"/> 
                             <LinkText text="See live"/>
                         </Align>
                         <Align href={project.repo} target="blank">
-                            <Git className=" h-auto w-6 md:w-8 mr-1"/> 
+                            <Git className=" h-auto w-6 md:w-8 mr-1 text-purple-300"/> 
                             <LinkText text="View repository"/>
                         </Align>
                     </View>
@@ -56,7 +56,7 @@ const Grid = styled.div`
 `
 
 const Card = styled.div`
-    ${tw`relative overflow-hidden p-3 md:p-5 lg:p-6 shadow-lg md:shadow-xl rounded-lg bg-purple-200`}
+    ${tw`relative overflow-hidden p-3 md:p-5 lg:p-6 shadow-lg md:shadow-xl rounded-lg bg-purple-900`}
     min-height: 320px;
 `
 
@@ -67,8 +67,8 @@ const View = styled.div`
 const Align = styled.a`
     ${tw`flex items-center mr-12`}
     &:hover {
-        filter: invert(27%) saturate(600%) hue-rotate(346deg);
-        cursor:pointer
+        filter: invert(20%) saturate(300%) hue-rotate(346deg);
+        cursor:pointer;
     }
 `
 

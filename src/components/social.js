@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import tw from 'twin.macro'
 
 import Instagram from "../images/svgs/instagram.svg";
 import Twitter from "../images/svgs/twitter.svg";
@@ -8,30 +9,31 @@ import Github from "../images/svgs/github.svg";
 import LinkedIn from "../images/svgs/linked-in.svg";
 
 const SocialIcon = () => (
-    <>
-        <Link href="https://www.instagram.com/allancolibao" target="blank">
-            <Instagram className="inline-block w-8 md:w-16 px-1 md:px-3 lg:px-2 h-auto" />
-        </Link>
-        <Link href="https://twitter.com/allancolibao" target="blank">
-            <Twitter className="inline-block w-8 md:w-16 px-1 md:px-3 lg:px-2 h-auto" />
-        </Link>
-        <Link href="https://www.behance.net/arcolibao" target="blank">
-            <Behance className="inline-block w-8 md:w-16 px-1 md:px-3 lg:px-2 h-auto" />
-        </Link>
-        <Link href="https://github.com/allancolibao" target="blank">
-            <Github className="inline-block w-8 md:w-16 px-1 md:px-3 lg:px-2 h-auto" />
-        </Link>
-        <Link href="https://www.linkedin.com/in/allan-colibao-635902151" target="blank">
-            <LinkedIn className="inline-block w-8 md:w-16 px-1 md:px-3 lg:px-2 h-auto" />
-        </Link>
-    </>
+    <Social data-sal="slide-right"
+            data-sal-duration="900"
+            data-sal-delay="600"
+            data-sal-easing="ease"
+    >
+        <a href="https://www.instagram.com/allancolibao" target="blank">
+            <Instagram className="inline-block lg:block w-8 md:w-12 px-1 md:px-3 lg:px-2 my-3 h-auto text-purple-600 transition duration-500 ease-in-out transform hover:scale-125 hover:text-purple-400" />
+        </a>
+        <a href="https://twitter.com/allancolibao" target="blank">
+            <Twitter className="inline-block lg:block w-8 md:w-12 px-1 md:px-3 lg:px-2 my-3 h-auto text-purple-600 transition duration-500 ease-in-out transform hover:scale-125 hover:text-purple-400" />
+        </a>
+        <a href="https://www.behance.net/arcolibao" target="blank">
+            <Behance className="inline-block lg:block w-8 md:w-12 px-1 md:px-3 lg:px-2 my-3 h-auto text-purple-600 transition duration-500 ease-in-out transform hover:scale-125 hover:text-purple-400" />
+        </a>
+        <a href="https://github.com/allancolibao" target="blank">
+            <Github className="inline-block lg:block w-8 md:w-12 px-1 md:px-3 lg:px-2 my-3 h-auto text-purple-600 transition duration-500 ease-in-out transform hover:scale-125 hover:text-purple-400" />
+        </a>
+        <a href="https://www.linkedin.com/in/allan-colibao-635902151" target="blank">
+            <LinkedIn className="inline-block lg:block w-8 md:w-12 px-1 md:px-3 lg:px-2 my-3 h-auto text-purple-600 transition duration-500 ease-in-out transform hover:scale-125 hover:text-purple-400" />
+        </a>
+    </Social>
 )
 
-
-const Link = styled.a`
-    &:hover {
-        filter: invert(27%) saturate(600%) hue-rotate(346deg);
-    }
+const Social = styled.div`
+    ${tw`fixed left-0 bottom-0 mb-6 ml-2 z-20`}
 `
 
 export default SocialIcon

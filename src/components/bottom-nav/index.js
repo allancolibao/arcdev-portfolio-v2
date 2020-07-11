@@ -17,9 +17,9 @@ const BottomNavigation = () => (
             </Link>
         </MenuLink>
         <MenuLink>
-            <Link href="#about">
-                <About className="h-auto w-6 md:w-8 mx-auto" />
-                About
+            <Link href="#projects">
+                <Projects className="h-auto w-6 md:w-8 mx-auto" />
+                Projects
             </Link>
         </MenuLink>
         <MenuLink>
@@ -29,15 +29,15 @@ const BottomNavigation = () => (
             </Link>
         </MenuLink>
         <MenuLink>
-            <Link href="#projects">
-                <Projects className="h-auto w-6 md:w-8 mx-auto" />
-                Projects
-            </Link>
-        </MenuLink>
-        <MenuLink>
             <Link href="#blog">
                 <Blogs className="h-auto w-6 md:w-8 mx-auto" />
                 Blogs
+            </Link>
+        </MenuLink>
+        <MenuLink>
+            <Link href="#about">
+                <About className="h-auto w-6 md:w-8 mx-auto" />
+                About
             </Link>
         </MenuLink>
     </NavList>
@@ -47,32 +47,30 @@ const NavList = styled.div`
     ${tw`flex 
         items-center 
         justify-between 
-        fixed 
-        border-t 
-        border-gray-400 
+        fixed
         bottom-0 
         w-full 
         z-30 
-        bg-white 
         py-1 
         md:py-3 
         px-2 
         md:px-6 
-        lg:hidden 
-        shadow`}
+        lg:hidden`}
+        background-color:#211c42;
+        box-shadow: 0px 36px 55px 2px rgba(0,0,0,0.51);
 `
 
 const MenuLink = styled.div`
     ${tw`inline-block 
         font-normal 
-        md:font-medium 
+        md:font-normal 
         text-xs 
-        md:text-base`}
+        md:text-sm`}
 `
 
 const Link = styled.a`
     ${tw`focus:text-purple-600 hover:text-purple-600`}
-    color: #9B9B9B
+    color: #d4d4d4;
 `
 
 export default BottomNavigation

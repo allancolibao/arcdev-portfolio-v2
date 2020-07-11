@@ -8,9 +8,9 @@ import tw from 'twin.macro'
 
 import SEO from "../components/seo"
 import LogoMessage from "../components/contact/logo"
-import ToggleSwitch from "../components/toggleSwitch"
 import Loader from "../components/loader"
 import MessageButton from "../components/contact/button"
+import SocialIcon from "../components/social" 
 
 const Contact = ({ location }) => {
 
@@ -62,60 +62,60 @@ const Contact = ({ location }) => {
     
     return (
         <>
-        <SEO title="Contact" bodyBackground="#6f36bc" />
+        <SEO title="Contact" bodyBackground="#211c42" />
         <MainDiv>
             <Notifications />
+            <SocialIcon/>
             <MessageButton location={location}/>
-            <div className="container mx-auto px-4 md:px-0">
-                <div className="flex pt-1 md:pt2">
+            <div className="px-4 md:px-8">
+                <div className="flex py-2 md:py-3">
                     <LogoMessage />
-                    <GrayIcon>
-                        <ToggleSwitch layout="w-6 sm:w-8"/>
-                    </GrayIcon>
                 </div>
-                <Form onSubmit={handleSubmit}>
-                    <Heading>Let's talk</Heading>
-                    <StyedDiv>
-                        <InputText 
-                            id="name"
-                            name="name"
-                            type="text"
-                            value={name} 
-                            onChange={e => setName(e.target.value)}
-                            required={true}
-                            placeholder="Name"
-                        />
-                    </StyedDiv>
-                    <StyedDiv>
-                        <InputText 
-                            id="email"
-                            name="email"
-                            type="email"
-                            value={email}
-                            onChange={e => setEmail(e.target.value)}
-                            required={true}
-                            placeholder="Email"
-                        />
-                    </StyedDiv>
-                    <StyedDiv>
-                        <TextAreaInput 
-                            id="message"
-                            name="message"
-                            value={message}
-                            onChange={e => setMessage(e.target.value)}
-                            required={true}
-                            placeholder="Message"
-                            rows="7"
-                        />
-                    </StyedDiv>
-                    <StyedDiv>
-                        <StyledButton 
-                            id="send-btn" 
-                            type="submit" 
-                            label="Send" 
-                        />
-                    </StyedDiv>
-                </Form>
+                <div className="container mx-auto">
+                    <Form onSubmit={handleSubmit}>
+                        <Heading>Let's talk</Heading>
+                        <StyedDiv>
+                            <InputText 
+                                id="name"
+                                name="name"
+                                type="text"
+                                value={name} 
+                                onChange={e => setName(e.target.value)}
+                                required={true}
+                                placeholder="Name"
+                            />
+                        </StyedDiv>
+                        <StyedDiv>
+                            <InputText 
+                                id="email"
+                                name="email"
+                                type="email"
+                                value={email}
+                                onChange={e => setEmail(e.target.value)}
+                                required={true}
+                                placeholder="Email"
+                            />
+                        </StyedDiv>
+                        <StyedDiv>
+                            <TextAreaInput 
+                                id="message"
+                                name="message"
+                                value={message}
+                                onChange={e => setMessage(e.target.value)}
+                                required={true}
+                                placeholder="Message"
+                                rows="7"
+                            />
+                        </StyedDiv>
+                        <StyedDiv>
+                            <StyledButton 
+                                id="send-btn" 
+                                type="submit" 
+                                label="Send" 
+                            />
+                        </StyedDiv>
+                    </Form>
+                </div>
             </div>
         </MainDiv>
         </>
@@ -151,10 +151,6 @@ const Form = styled.form`
 
 const StyedDiv = styled.div`
     ${tw`py-2 md:py-4 w-full md:w-1/2`}
-`
-
-const GrayIcon = styled.div`
-    filter: grayscale();
 `
 
 export default Contact;

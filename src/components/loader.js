@@ -6,9 +6,9 @@ import { keyframes } from '@emotion/core'
 const  Loader = () => (
     <MainDiv>
         <LoaderDiv>
-            <span className="rounded-full bg-white h-2 w-2 md:h-3 md:w-3 lg:h-4 lg:w-4 mx-1 inline-block"></span>
-            <span className="rounded-full bg-white h-2 w-2 md:h-3 md:w-3 lg:h-4 lg:w-4 mx-1 inline-block"></span>
-            <span className="rounded-full bg-white h-2 w-2 md:h-3 md:w-3 lg:h-4 lg:w-4 mx-1 inline-block"></span>
+            <span className="rounded-full bg-white h-2 w-2 md:h-3 md:w-3 mx-1 inline-block"></span>
+            <span className="rounded-full bg-white h-2 w-2 md:h-3 md:w-3 mx-1 inline-block"></span>
+            <span className="rounded-full bg-white h-2 w-2 md:h-3 md:w-3 mx-1 inline-block"></span>
         </LoaderDiv>
     </MainDiv>
 )   
@@ -16,7 +16,7 @@ const  Loader = () => (
 
 const MainDiv = styled.div`
     ${tw`flex w-full h-screen fixed left-0 top-0 z-40`}
-    background-color: #6f36bc
+    background-color: #211c42;
 `
 
 const bounce = keyframes`

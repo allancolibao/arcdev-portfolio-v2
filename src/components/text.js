@@ -24,27 +24,27 @@ const LinkText = ({text, layout}) => <Label className={layout}>{text}</Label>
 
 const Title = styled.h2`
     ${tw`text-lg md:text-2xl lg:text-4xl font-bold`}
-    color: #282828;
+    color: #ab7dff;
 `
 
 const Head = styled.h5`
     ${tw`text-sm md:text-xl lg:text-2xl font-semibold`}
-    color: #6f36bc
+    color: #9354e8;
 `
 
 const BlkHead = styled.h5`
     ${tw`text-sm md:text-xl lg:text-2xl font-semibold`}
-    color: #282828
+    color: #d4d4d4;
 `
 
 const SubHead = styled.h6`
     ${tw`text-xs md:text-sm lg:text-base font-semibold`}
-    color: #282828
+    color: #dabfff;
 `
 
 const Paragraph = styled.p`
     ${tw`text-xs md:text-sm lg:text-base font-normal leading-relaxed`}
-    color: #606060
+    color: #d4d4d4;
 `
 
 const Tag = styled.small`
@@ -52,7 +52,7 @@ const Tag = styled.small`
 `
 
 const Label = styled.h6`
-    ${tw`text-xs md:text-sm lg:text-base italic text-purple-500`}
+    ${tw`text-xs md:text-sm lg:text-base italic text-purple-300`}
 `
 
 export {
