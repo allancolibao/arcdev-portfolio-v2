@@ -29,22 +29,22 @@ const Title = styled.h2`
 
 const Head = styled.h5`
     ${tw`text-sm md:text-xl lg:text-2xl font-semibold`}
-    color: #9354e8;
+    color: #a367f5;
 `
 
 const BlkHead = styled.h5`
     ${tw`text-sm md:text-xl lg:text-2xl font-semibold`}
-    color: #d4d4d4;
+    color: #e3e3e3;
 `
 
 const SubHead = styled.h6`
     ${tw`text-xs md:text-sm lg:text-base font-semibold`}
-    color: #dabfff;
+    color: #baabff;
 `
 
 const Paragraph = styled.p`
     ${tw`text-xs md:text-sm lg:text-base font-normal leading-relaxed`}
-    color: #d4d4d4;
+    color: #cfcfcf;
 `
 
 const Tag = styled.small`

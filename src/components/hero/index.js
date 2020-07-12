@@ -2,7 +2,6 @@ import React from "react"
 import styled from "@emotion/styled"
 import tw from 'twin.macro'
 
-// import Image from "./image"
 import Human from "../../images/svgs/human.svg";
 
 const Hero = () => (
@@ -70,11 +69,11 @@ const Heading = styled.h1`
 
 const SubHeading = styled.p`
     ${tw`text-sm md:text-xl lg:text-2xl font-normal py-2 md:py-3 lg:py-5`}
-    color: #d4d4d4;
+    color: #e3e3e3;
 `
 const Text = styled.p`
     ${tw`text-xs md:text-base lg:text-lg font-thin py-2 md:py-3 lg:py-5 leading-loose`}
-    color: #d4d4d4;
+    color: #cfcfcf;
 `
 
 const Link = styled.a`
