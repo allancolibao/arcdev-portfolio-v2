@@ -22,6 +22,8 @@ const Tagging = ({text, layout}) => <Tag className={layout}>{text}</Tag>
 
 const LinkText = ({text, layout}) => <Label className={layout}>{text}</Label>
 
+const PostedDate = ({text, layout}) => <Date className={layout}>{text}</Date>
+
 const Title = styled.h2`
     ${tw`text-lg md:text-2xl lg:text-4xl font-bold`}
     color: #ab7dff;
@@ -48,11 +50,15 @@ const Paragraph = styled.p`
 `
 
 const Tag = styled.small`
-    ${tw`text-xs md:text-sm font-thin md:font-light px-3 bg-purple-400 text-white rounded border-solid border border-purple-600`}
+    ${tw`text-xs md:text-sm font-thin md:font-light px-3 bg-purple-500 text-gray-200 rounded-sm`}
 `
 
 const Label = styled.h6`
     ${tw`text-xs md:text-sm lg:text-base italic text-purple-300`}
+`
+
+const Date = styled.p`
+    ${tw`text-xs md:text-sm font-thin md:font-light text-gray-500`}
 `
 
 export {
@@ -62,5 +68,6 @@ export {
     SubHeading,
     Content,
     Tagging,
-    LinkText
+    LinkText,
+    PostedDate
 }

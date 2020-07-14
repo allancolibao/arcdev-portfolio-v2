@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import tw from 'twin.macro'
 
-import { SectionTitle, BlkHeading, Content} from "../text"
+import { SectionTitle, BlkHeading, Content, PostedDate} from "../text"
 import Bookmark from "../../images/svgs/bookmark.svg"
 
 
@@ -18,9 +18,10 @@ const Blogs = ({blogs}) => (
             <Grid>
                 {blogs ? blogs.map((blog, i) => 
                     <Card key={i}>
-                        <Bookmark className="absolute top-0 left-0 w-16 md:w-24 h-auto"/>
+                        <Bookmark className="hidden md:block absolute top-0 left-0 w-16 md:w-24 h-auto"/>
                         <BlkHeading layout="mb-1 md:mb-2" text={blog.title}/>
                         <Content layout="mb-4" text={blog.description}/>
+                        <PostedDate text={blog.date_posted} />
                         <View>
                             <Link to={`/${blog.slug}`}>
                                 <ReadMore>Read more</ReadMore>
@@ -44,36 +45,38 @@ const SectionContent = styled.div`
 `
 
 const Grid = styled.div`
-    ${tw`grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-5 lg:gap-8`}
+    ${tw`grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6`}
 `
 
 const Card = styled.div`
-    ${tw`relative overflow-hidden pl-16 md:pl-24 pr-3 md:pr-5 lg:pr-6 py-3 md:py-5 lg:py-6 shadow-lg md:shadow-xl rounded-lg bg-purple-900`}
+    ${tw`relative overflow-hidden pl-3 md:pl-24 pr-3 md:pr-5 lg:pr-6 py-3 md:py-5 lg:py-6 shadow-lg md:shadow-xl bg-purple-900`}
     min-height: 320px;
 `
 
 const View = styled.div`
-    ${tw`absolute flex right-0 bottom-0 mb-6 mr-6`}
+    ${tw`absolute flex right-0 bottom-0 mb-6 mr-3 md:mr-5 lg:mr-6`}
 `
 
 const ReadMore = styled.button`
     ${tw`bg-transparent 
-        text-purple-600
+        text-purple-400
         text-xs
         md:text-base 
         font-semibold 
-        hover:text-white 
         py-1
         px-2
         md:py-1 
         md:px-3 
         border 
-        border-purple-600 
-        hover:border-transparent 
         rounded 
+        border-purple-400 
+        transition 
+        duration-500 
+        ease-in-out 
+        transform 
+        hover:border-transparent 
         hover:bg-purple-500 
-        hover:text-white 
-        hover:font-medium`}
+        hover:text-gray-200`}
 `
 
 export default Blogs

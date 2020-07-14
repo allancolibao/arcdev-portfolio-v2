@@ -52,11 +52,11 @@ const SectionContent = styled.div`
 `
 
 const Grid = styled.div`
-    ${tw`grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-5 lg:gap-8`}
+    ${tw`grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6`}
 `
 
 const Card = styled.div`
-    ${tw`relative overflow-hidden p-3 md:p-5 lg:p-6 shadow-lg md:shadow-xl rounded-lg bg-purple-900`}
+    ${tw`relative overflow-hidden p-3 md:p-5 lg:p-6 shadow-lg md:shadow-xl bg-purple-900`}
     min-height: 320px;
 `
 
