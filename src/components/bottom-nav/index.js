@@ -13,31 +13,31 @@ const BottomNavigation = () => (
         <MenuLink>
             <Link href="#home">
                 <Home className="h-auto w-6 md:w-8 mx-auto"/>
-                Home
+                {/* Home */}
             </Link>
         </MenuLink>
         <MenuLink>
             <Link href="#projects">
                 <Projects className="h-auto w-6 md:w-8 mx-auto" />
-                Projects
+                {/* Projects */}
             </Link>
         </MenuLink>
         <MenuLink>
             <Link href="#skills">
                 <Skills className="h-auto w-6 md:w-8 mx-auto" />
-                Skills
+                {/* Skills */}
             </Link>
         </MenuLink>
         <MenuLink>
             <Link href="#blog">
                 <Blogs className="h-auto w-6 md:w-8 mx-auto" />
-                Blogs
+                {/* Blogs */}
             </Link>
         </MenuLink>
         <MenuLink>
             <Link href="#about">
                 <About className="h-auto w-6 md:w-8 mx-auto" />
-                About
+                {/* About */}
             </Link>
         </MenuLink>
     </NavList>
@@ -51,8 +51,8 @@ const NavList = styled.div`
         bottom-0 
         w-full 
         z-30 
-        py-1 
-        md:py-3 
+        py-3 
+        md:py-4 
         px-2 
         md:px-6 
         lg:hidden`}
