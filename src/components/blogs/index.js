@@ -54,7 +54,7 @@ const Card = styled.div`
 `
 
 const View = styled.div`
-    ${tw`absolute flex right-0 bottom-0 mb-6 mr-3 md:mr-5 lg:mr-6`}
+    ${tw`absolute flex right-0 bottom-0 mb-3 md:mb-5 lg:mb-6 mr-3 md:mr-5 lg:mr-6`}
 `
 
 const ReadMore = styled.button`
