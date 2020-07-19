@@ -7,7 +7,7 @@ import Star from "./star"
 
 const Skills = ({stacks, tools}) => (
     <Section id="skills">
-        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="What Can I Do"/>
+        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="Creative Process"/>
         <SectionContent 
             data-sal="fade"
             data-sal-duration="900"
