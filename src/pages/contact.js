@@ -11,6 +11,7 @@ import LogoMessage from "../components/contact/logo"
 import Loader from "../components/loader"
 import MessageButton from "../components/contact/button"
 import SocialIcon from "../components/social" 
+import Human from "../images/svgs/human.svg";
 
 const Contact = ({ location }) => {
 
@@ -72,49 +73,78 @@ const Contact = ({ location }) => {
                     <LogoMessage />
                 </div>
                 <div className="container mx-auto">
-                    <Form onSubmit={handleSubmit}>
-                        <Heading>Let's talk</Heading>
-                        <StyedDiv>
-                            <InputText 
-                                id="name"
-                                name="name"
-                                type="text"
-                                value={name} 
-                                onChange={e => setName(e.target.value)}
-                                required={true}
-                                placeholder="Name"
-                            />
-                        </StyedDiv>
-                        <StyedDiv>
-                            <InputText 
-                                id="email"
-                                name="email"
-                                type="email"
-                                value={email}
-                                onChange={e => setEmail(e.target.value)}
-                                required={true}
-                                placeholder="Email"
-                            />
-                        </StyedDiv>
-                        <StyedDiv>
-                            <TextAreaInput 
-                                id="message"
-                                name="message"
-                                value={message}
-                                onChange={e => setMessage(e.target.value)}
-                                required={true}
-                                placeholder="Message"
-                                rows="7"
-                            />
-                        </StyedDiv>
-                        <StyedDiv>
-                            <StyledButton 
-                                id="send-btn" 
-                                type="submit" 
-                                label="Send" 
-                            />
-                        </StyedDiv>
-                    </Form>
+                    <div className="flex"> 
+                        <div className="hidden md:block w-full md:w-1/2">
+                            <Human  data-sal="fade"
+                                    data-sal-duration="900"
+                                    data-sal-delay="600"
+                                    data-sal-easing="ease"/>
+
+                        </div>  
+                        <div className="w-full md:w-1/2">
+                            <Form onSubmit={handleSubmit}>
+                                <Heading    data-sal="slide-up"
+                                            data-sal-duration="900"
+                                            data-sal-delay="500"
+                                            data-sal-easing="ease">
+                                        Let's talk
+                                </Heading>
+                                <StyedDiv   data-sal="slide-up"
+                                            data-sal-duration="900"
+                                            data-sal-delay="600"
+                                            data-sal-easing="ease">
+                                    <InputText 
+                                        id="name"
+                                        name="name"
+                                        type="text"
+                                        value={name} 
+                                        onChange={e => setName(e.target.value)}
+                                        required={true}
+                                        placeholder="Name"
+                                    />
+                                </StyedDiv>
+                                <StyedDiv   data-sal="slide-up"
+                                            data-sal-duration="900"
+                                            data-sal-delay="600"
+                                            data-sal-easing="ease">
+                                    <InputText 
+                                        id="email"
+                                        name="email"
+                                        type="email"
+                                        value={email}
+                                        onChange={e => setEmail(e.target.value)}
+                                        required={true}
+                                        placeholder="Email"
+                                    />
+                                </StyedDiv>
+                                <StyedDiv   data-sal="slide-up"
+                                            data-sal-duration="900"
+                                            data-sal-delay="700"
+                                            data-sal-easing="ease">
+                                    <TextAreaInput 
+                                        id="message"
+                                        name="message"
+                                        value={message}
+                                        onChange={e => setMessage(e.target.value)}
+                                        required={true}
+                                        placeholder="Message"
+                                        rows="7"
+                                    />
+                                </StyedDiv>
+                                <StyedDiv   data-sal="slide-up"
+                                            data-sal-duration="900"
+                                            data-sal-delay="800"
+                                            data-sal-easing="ease">
+                                    <StyledButton 
+                                        id="send-btn" 
+                                        type="submit" 
+                                        label="Send" 
+                                    />
+                                </StyedDiv>
+                            </Form>
+                        </div> 
+                       
+                    </div>
                 </div>
             </div>
         </MainDiv>
@@ -150,7 +180,7 @@ const Form = styled.form`
 `
 
 const StyedDiv = styled.div`
-    ${tw`py-2 md:py-4 w-full md:w-1/2`}
+    ${tw`py-2 md:py-4 w-full`}
 `
 
 export default Contact;

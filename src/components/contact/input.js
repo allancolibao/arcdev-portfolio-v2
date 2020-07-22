@@ -40,19 +40,19 @@ const Input = styled.input`
         text-sm
         md:text-base
         appearance-none 
+        bg-purple-900 
         border-2 
-        border-gray-200 
-        rounded
-        md:rounded-md 
+        border-purple-900 
         w-full
+        text-purple-200
         py-2
         px-2 
         md:px-4 
-        text-gray-700 
         leading-tight 
         focus:outline-none 
-        focus:bg-white 
-        focus:border-purple-500`}
+        focus:text-purple-200
+        focus:bg-purple-900
+        focus:border-purple-900`}
 `
 
 const TextArea = styled.textarea`
@@ -60,18 +60,19 @@ const TextArea = styled.textarea`
         appearance-none 
         text-sm
         md:text-base
-        border-2 
-        border-gray-200 
-        rounded-md 
+        text-purple-200
+        border-2
+        bg-purple-800 
+        border-purple-800 
         w-full
         py-2 
         px-2 
         md:px-4 
-        text-gray-700 
         leading-tight 
         focus:outline-none 
-        focus:bg-white 
-        focus:border-purple-500`}
+        focus:text-purple-200 
+        focus:bg-purple-800
+        focus:border-purple-800`}
 `
 
 const Button = styled.button`
@@ -80,16 +81,14 @@ const Button = styled.button`
         text-sm
         md:text-base
         appearance-none 
-        rounded-md 
-        w-full
         py-2
         md:py-3 
         px-4 
         leading-tight 
         focus:outline-none
-        focus:border-purple-800
-        bg-purple-600
-        hover:bg-purple-700`}
+        focus:border-purple-700
+        bg-gray-500
+        hover:bg-gray-600`}
 `
 
 export {
