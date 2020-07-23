@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 
 import { SectionTitle, Heading, SubHeading, Content } from "../text"
 
-import Human from "../../images/svgs/human.svg";
+import Image from "./image";
 import Marker from "../../images/svgs/marker.svg";
 import Mail from "../../images/svgs/mail.svg";
 import Phone from "../../images/svgs/phone.svg";
@@ -13,7 +13,7 @@ const About = () => (
     <Section id="about">
         <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="About me"/>
         <SectionContent> 
-            <div className="w-full xl:w-3/4 xl:pr-16" 
+            <div className="w-full xl:w-1/2 xl:pr-16" 
                 data-sal="fade"
                 data-sal-duration="900"
                 data-sal-delay="300"
@@ -58,8 +58,8 @@ const About = () => (
                     <Content layout="inline-block" text="+63 966 798 1133"/>
                 </ContactInfo>
             </div>
-            <div className="hidden xl:block xl:w-1/4">
-                <Human  data-sal="slide-left"
+            <div className="hidden xl:block xl:w-1/2">
+                <Image  data-sal="slide-left"
                         data-sal-duration="900"
                         data-sal-delay="300"
                         data-sal-easing="ease"

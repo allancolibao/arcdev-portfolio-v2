@@ -11,7 +11,7 @@ import LogoMessage from "../components/contact/logo"
 import Loader from "../components/loader"
 import MessageButton from "../components/contact/button"
 import SocialIcon from "../components/social" 
-import Human from "../images/svgs/human.svg";
+import Plane from "../images/svgs/plane.svg";
 
 const Contact = ({ location }) => {
 
@@ -75,7 +75,7 @@ const Contact = ({ location }) => {
                 <div className="container mx-auto">
                     <div className="flex"> 
                         <div className="hidden md:block w-full md:w-1/2">
-                            <Human  data-sal="fade"
+                            <Plane  data-sal="fade"
                                     data-sal-duration="900"
                                     data-sal-delay="600"
                                     data-sal-easing="ease"/>
@@ -143,7 +143,6 @@ const Contact = ({ location }) => {
                                 </StyedDiv>
                             </Form>
                         </div> 
-                       
                     </div>
                 </div>
             </div>
