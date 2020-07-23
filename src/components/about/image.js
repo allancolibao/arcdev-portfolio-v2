@@ -7,7 +7,7 @@ const Image = () => {
     query {
       file(relativePath: { eq: "new-dp.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 350, quality:100) {
+          fluid(maxWidth: 330, quality:100) {
             ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluidLimitPresentationSize
           }
@@ -17,14 +17,10 @@ const Image = () => {
   `)
 
   return <Img fluid={data.file.childImageSharp.fluid} 
-              className="shadow-xl mt-8" 
-              style={borderStyle}
+              className="shadow-xl mt-10" 
               alt="Allan Colibao"
           />
 }
 
-const borderStyle = {
-  borderColor: "#e3e3e3"
-};
 
 export default Image
