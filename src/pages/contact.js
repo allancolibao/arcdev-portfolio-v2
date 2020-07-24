@@ -78,7 +78,8 @@ const Contact = ({ location }) => {
                             <Plane  data-sal="fade"
                                     data-sal-duration="900"
                                     data-sal-delay="600"
-                                    data-sal-easing="ease"/>
+                                    data-sal-easing="ease"
+                                    className="w-11/12 lg:w-full"/>
 
                         </div>  
                         <div className="w-full md:w-1/2">

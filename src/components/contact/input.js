@@ -85,6 +85,10 @@ const Button = styled.button`
         md:py-3 
         px-4 
         leading-tight 
+        transition 
+        duration-500 
+        ease-in-out 
+        transform
         focus:outline-none
         focus:border-purple-700
         bg-gray-500

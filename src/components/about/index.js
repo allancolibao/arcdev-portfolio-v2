@@ -13,7 +13,7 @@ const About = () => (
     <Section id="about">
         <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="About me"/>
         <SectionContent> 
-            <div className="w-full xl:w-1/2 xl:pr-16" 
+            <div className="w-full xl:w-1/2 pr-0 lg:pr-12 xl:pr-16" 
                 data-sal="fade"
                 data-sal-duration="900"
                 data-sal-delay="300"
@@ -45,26 +45,30 @@ const About = () => (
                 <Content text="2010 - 2013"/>
                 <Content layout="pb-4 md:pb-6 lg:pb-10" text="Computer Systems Technological College, Inc."/>
 
-                <ContactInfo>
-                    <Marker className="inline-block w-4 md:w-5 lg:w-6 h-auto mr-1 md:mr-2"/> 
-                    <Content layout="inline-block" text="Manila, Philippines"/>
-                </ContactInfo>
-                <ContactInfo>
-                    <Mail className="inline-block w-4 md:w-5 lg:w-6 h-auto mr-1 md:mr-2"/> 
-                    <Content layout="inline-block" text="colibaoallanreyes@gmail.com"/>
-                </ContactInfo>
-                <ContactInfo>
-                    <Phone className="inline-block w-4 md:w-5 lg:w-6 h-auto mr-1 md:mr-2"/> 
-                    <Content layout="inline-block" text="+63 966 798 1133"/>
-                </ContactInfo>
+                
             </div>
-            <div className="hidden xl:block xl:w-1/2">
-                <Image  data-sal="slide-left"
+            <div className="w-full xl:w-1/2">
+                <div    data-sal="fade"
                         data-sal-duration="900"
                         data-sal-delay="300"
                         data-sal-easing="ease"
-                        className="p-4"
-                />
+                        className="hidden lg:block">
+                    <Image />
+                </div>
+                <div className="mt-0 lg:mt-10">
+                    <ContactInfo>
+                        <Marker className="inline-block w-4 md:w-5 lg:w-6 h-auto mr-1 md:mr-2"/> 
+                        <Content layout="inline-block" text="Manila, Philippines"/>
+                    </ContactInfo>
+                    <ContactInfo>
+                        <Mail className="inline-block w-4 md:w-5 lg:w-6 h-auto mr-1 md:mr-2"/> 
+                        <Content layout="inline-block" text="colibaoallanreyes@gmail.com"/>
+                    </ContactInfo>
+                    <ContactInfo>
+                        <Phone className="inline-block w-4 md:w-5 lg:w-6 h-auto mr-1 md:mr-2"/> 
+                        <Content layout="inline-block" text="+63 966 798 1133"/>
+                    </ContactInfo>
+                </div>
             </div>
         </SectionContent>
     </Section>
@@ -76,7 +80,7 @@ const Section = styled.section`
 `
 
 const SectionContent = styled.div`
-    ${tw`flex`}
+    ${tw`block lg:flex`}
 `
 
 const ContactInfo = styled.div`
