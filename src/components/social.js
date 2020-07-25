@@ -15,19 +15,19 @@ const SocialIcon = () => (
             data-sal-easing="ease"
     >
         <a href="https://www.instagram.com/allancolibao" target="blank">
-            <Instagram className="inline-block lg:block w-8 md:w-12 px-1 md:px-3 lg:px-2 my-3 h-auto text-purple-600 transition duration-500 ease-in-out transform hover:scale-125 hover:text-purple-400" />
+            <Instagram className={socialIcon.style} />
         </a>
         <a href="https://twitter.com/allancolibao" target="blank">
-            <Twitter className="inline-block lg:block w-8 md:w-12 px-1 md:px-3 lg:px-2 my-3 h-auto text-purple-600 transition duration-500 ease-in-out transform hover:scale-125 hover:text-purple-400" />
+            <Twitter className={socialIcon.style} />
         </a>
         <a href="https://www.behance.net/arcolibao" target="blank">
-            <Behance className="inline-block lg:block w-8 md:w-12 px-1 md:px-3 lg:px-2 my-3 h-auto text-purple-600 transition duration-500 ease-in-out transform hover:scale-125 hover:text-purple-400" />
+            <Behance className={socialIcon.style} />
         </a>
         <a href="https://github.com/allancolibao" target="blank">
-            <Github className="inline-block lg:block w-8 md:w-12 px-1 md:px-3 lg:px-2 my-3 h-auto text-purple-600 transition duration-500 ease-in-out transform hover:scale-125 hover:text-purple-400" />
+            <Github className={socialIcon.style} />
         </a>
         <a href="https://www.linkedin.com/in/allan-colibao-635902151" target="blank">
-            <LinkedIn className="inline-block lg:block w-8 md:w-12 px-1 md:px-3 lg:px-2 my-3 h-auto text-purple-600 transition duration-500 ease-in-out transform hover:scale-125 hover:text-purple-400" />
+            <LinkedIn className={socialIcon.style} />
         </a>
     </Social>
 )
@@ -35,5 +35,9 @@ const SocialIcon = () => (
 const Social = styled.div`
     ${tw`fixed left-0 bottom-0 mb-6 ml-2 z-20`}
 `
+
+const socialIcon = {
+    style: "inline-block lg:block w-8 md:w-12 px-1 md:px-3 lg:px-2 my-3 h-auto text-purple-600 transition duration-500 ease-in-out transform hover:scale-125 hover:text-purple-400"
+}
 
 export default SocialIcon

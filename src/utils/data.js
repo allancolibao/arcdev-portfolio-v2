@@ -1,48 +1,7 @@
 import { useState, useEffect }from "react"
 import firebase from "gatsby-plugin-firebase"
+import axios from 'axios'
 
-
-const Stacks = () => {
-
-    const [stacks, setStacks] = useState()
-
-    useEffect(() => {
-        firebase
-        .firestore()
-        .collection("/skills/stacks/lists")
-        .orderBy("name")
-        .onSnapshot(snapshot => {
-            const lists = snapshot.docs.map(doc => ({
-                    id: doc.id,
-                    ...doc.data(),   
-            }))
-            setStacks(lists)
-        })
-    }, [])
-
-    return [stacks]
-}
-
-const Tools = () => {
-    
-    const [tools, setTools] =  useState()
-
-    useEffect(() => {
-        firebase
-        .firestore()
-        .collection("/skills/tools/lists")
-        .orderBy("name")
-        .onSnapshot(snapshot => {
-            const lists = snapshot.docs.map(doc => ({
-                    id: doc.id,
-                    ...doc.data(),   
-            }))
-            setTools(lists)
-        })
-    }, [])
-
-    return [tools]
-}
 
 const SelectedProjects = () => {
     
@@ -86,9 +45,22 @@ const BlogList = () => {
     return [blogs]
 }
 
+const Repos = () => {
+    
+    const url = "https://api.github.com/users/allancolibao/repos"
+    const [repo, setRepo] =  useState([])
+
+    useEffect(() => {
+        axios
+        .get(url)
+        .then(response => setRepo(response.data))
+    }, [])
+
+    return [repo]
+}
+
 export {
-    Stacks,
-    Tools,
     SelectedProjects,
-    BlogList
+    BlogList,
+    Repos
 }

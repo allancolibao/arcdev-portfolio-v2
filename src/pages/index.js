@@ -1,11 +1,11 @@
 import React from "react"
-import {Stacks, Tools, SelectedProjects, BlogList} from "../utils/data"
+import { SelectedProjects, BlogList, Repos } from "../utils/data"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 import About from "../components/about"
-import Skills from "../components/skills"
+import Repository from "../components/repo"
 import Projects from "../components/projects"
 import Blogs from "../components/blogs"
 import MessageButton from "../components/contact/button"
@@ -13,17 +13,16 @@ import MessageButton from "../components/contact/button"
 
 const IndexPage = ({location}) => {
 
-  const [ stacks ] = Stacks();
-  const [ tools ] = Tools();
   const [ projects ] = SelectedProjects();
   const [ blogs ] = BlogList();
+  const [ repos ] = Repos();
 
   return(
     <Layout location={location}>
       <SEO title="Front-end Developer" bodyBackground="#211c42"/>
       <Hero />
       <Projects projects={projects}/>
-      <Skills stacks={stacks} tools={tools}/>
+      <Repository repos={repos}/>
       <Blogs blogs={blogs}/>
       <About />
       <MessageButton location={location} />

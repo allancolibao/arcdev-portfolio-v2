@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 
 import Home from "../../images/svgs/home.svg";
 import About from "../../images/svgs/about.svg";
-import Skills from "../../images/svgs/skill.svg";
+import Repository from "../../images/svgs/repository.svg";
 import Projects from "../../images/svgs/project.svg";
 import Blogs from "../../images/svgs/form.svg";
 
@@ -23,9 +23,9 @@ const BottomNavigation = () => (
             </Link>
         </MenuLink>
         <MenuLink>
-            <Link href="#skills">
-                <Skills className="h-auto w-6 md:w-8 mx-auto" />
-                {/* Skills */}
+            <Link href="#repository">
+                <Repository className="h-auto w-6 md:w-8 mx-auto" />
+                {/* Repositories */}
             </Link>
         </MenuLink>
         <MenuLink>

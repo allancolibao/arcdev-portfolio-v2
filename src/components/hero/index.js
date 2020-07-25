@@ -64,7 +64,7 @@ const StyledDiv = styled.div`
 `
 
 const Heading = styled.h1`
-    ${tw`text-2xl md:text-4xl lg:text-5xl font-bold md:font-black`}
+    ${tw`text-2xl md:text-4xl lg:text-5xl font-black`}
 `
 
 const SubHeading = styled.p`

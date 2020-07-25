@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 
 import Home from "../../images/svgs/home.svg";
 import About from "../../images/svgs/about.svg";
-import Skills from "../../images/svgs/skill.svg";
+import Repository from "../../images/svgs/repository.svg";
 import Projects from "../../images/svgs/project.svg";
 import Blogs from "../../images/svgs/form.svg";
 
@@ -16,8 +16,8 @@ const Link = ({name, to}) => {
               return <Home className={iconStyle.style}/>;
             case 'Projects':
               return <Projects className={iconStyle.style}/>;
-            case 'Skills':
-              return <Skills className={iconStyle.style}/>;
+            case 'Repository':
+              return <Repository className={iconStyle.style}/>;
             case 'Blog':
               return <Blogs className={iconStyle.style}/>;
             case 'About':

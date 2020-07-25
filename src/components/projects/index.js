@@ -52,11 +52,11 @@ const SectionContent = styled.div`
 `
 
 const Grid = styled.div`
-    ${tw`grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6`}
+    ${tw`grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6`}
 `
 
 const Card = styled.div`
-    ${tw`relative overflow-hidden p-3 md:p-5 lg:p-6 shadow-lg md:shadow-xl bg-purple-900`}
+    ${tw`relative overflow-hidden p-3 md:p-4 lg:p-5 shadow-lg md:shadow-xl bg-purple-900`}
     min-height: 320px;
 `
 
@@ -65,7 +65,7 @@ const View = styled.div`
 `
 
 const Align = styled.a`
-    ${tw`flex items-center mr-12`}
+    ${tw`flex items-center mr-5 md:mr-12`}
     &:hover {
         filter: invert(20%) saturate(300%) hue-rotate(346deg);
         cursor:pointer;

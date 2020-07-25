@@ -91,8 +91,8 @@ const Button = styled.button`
         transform
         focus:outline-none
         focus:border-purple-700
-        bg-gray-500
-        hover:bg-gray-600`}
+        bg-gray-600
+        hover:bg-gray-700`}
 `
 
 export {

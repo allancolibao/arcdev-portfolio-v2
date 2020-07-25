@@ -87,7 +87,8 @@ const Contact = ({ location }) => {
                                 <Heading    data-sal="slide-up"
                                             data-sal-duration="900"
                                             data-sal-delay="500"
-                                            data-sal-easing="ease">
+                                            data-sal-easing="ease"
+                                            className="text-purple-100">
                                         Let's talk
                                 </Heading>
                                 <StyedDiv   data-sal="slide-up"
@@ -167,7 +168,7 @@ const MainDiv = styled.div`
 `
 
 const Heading = styled.h1`
-    ${tw`py-2 md:py-4 lg:py-6 text-xl md:text-2xl lg:text-3xl font-semibold text-white`}
+    ${tw`text-2xl md:text-4xl lg:text-5xl font-black`}
 `
 
 const Form = styled.form`

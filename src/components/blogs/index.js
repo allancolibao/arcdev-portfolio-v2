@@ -18,7 +18,7 @@ const Blogs = ({blogs}) => (
             <Grid>
                 {blogs ? blogs.map((blog, i) => 
                     <Card key={i}>
-                        <Bookmark className="hidden md:block absolute top-0 left-0 w-16 md:w-24 h-auto"/>
+                        <Bookmark className="hidden lg:block absolute top-0 left-0 w-16 lg:w-20 xl:w-24 h-auto"/>
                         <BlkHeading layout="mb-1 md:mb-2" text={blog.title}/>
                         <Content layout="mb-4" text={blog.description}/>
                         <PostedDate text={blog.date_posted} />
@@ -45,11 +45,11 @@ const SectionContent = styled.div`
 `
 
 const Grid = styled.div`
-    ${tw`grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6`}
+    ${tw`grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6`}
 `
 
 const Card = styled.div`
-    ${tw`relative overflow-hidden pl-3 md:pl-24 pr-3 md:pr-5 lg:pr-6 py-3 md:py-5 lg:py-6 shadow-lg md:shadow-xl bg-purple-900`}
+    ${tw`relative overflow-hidden px-3 md:px-4 lg:pl-20 xl:pl-24 lg:pr-5 py-3 md:py-4 lg:py-5 shadow-lg md:shadow-xl bg-purple-900`}
     min-height: 320px;
 `
 
@@ -61,7 +61,8 @@ const ReadMore = styled.button`
     ${tw`bg-transparent 
         text-purple-400
         text-xs
-        md:text-base 
+        lg:text-xs 
+        xl:text-base 
         font-semibold 
         py-1
         px-2
@@ -74,6 +75,7 @@ const ReadMore = styled.button`
         duration-500 
         ease-in-out 
         transform 
+        focus:outline-none
         hover:border-transparent 
         hover:bg-purple-500 
         hover:text-gray-200`}
