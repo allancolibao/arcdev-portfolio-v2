@@ -33,7 +33,7 @@ const SocialIcon = () => (
 )
 
 const Social = styled.div`
-    ${tw`fixed left-0 bottom-0 mb-6 ml-2 z-20`}
+    ${tw`lg:fixed left-0 bottom-0 mb-6 ml-2 z-20 `}
 `
 
 const socialIcon = {
