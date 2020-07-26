@@ -1,6 +1,7 @@
 import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { withPrefix } from "gatsby"
+import { keyframes } from '@emotion/core'
 
 import styled from "@emotion/styled"
 import tw from 'twin.macro'
@@ -27,6 +28,15 @@ const MessageButton = ({ location }) => {
     )    
 }
 
+const spin = keyframes`
+    from {
+        transform:rotate(180deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+`
+
 const Button = styled.button`
     ${tw`fixed
         rounded-full
@@ -46,7 +56,14 @@ const Button = styled.button`
         right-0 
         z-30 
         focus:outline-none 
-        hover:bg-purple-700`}
+        transition 
+        duration-500 
+        ease-in-out 
+        transform 
+        hover:scale-110`}
+        animation-name:  ${spin};
+        animation-duration: 1s;
+        animation-iteration-count: 1;
 `
 
 const CloseButton = styled.button`
@@ -67,8 +84,16 @@ const CloseButton = styled.button`
         lg:mr-24
         right-0 
         z-30 
-        focus:outline-none 
+        focus:outline-none
+        transition 
+        duration-500 
+        ease-in-out 
+        transform 
+        hover:scale-110 
         hover:bg-gray-200`}
+        animation-name:  ${spin};
+        animation-duration: 1s;
+        animation-iteration-count: 1;
 `
 
 export default MessageButton

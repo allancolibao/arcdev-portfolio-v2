@@ -36,9 +36,8 @@ const sticky = css`
   position: fixed;
   top: 0;
   opacity: 0;
-  animation: ${fadeIn} ease-in 1;
+  animation: ${fadeIn} ease-in 1s;
   animation-fill-mode: forwards;
-  animation-duration: 1s;
   box-shadow: 0px -36px 55px -2px rgba(0,0,0,0.51);
 `
 

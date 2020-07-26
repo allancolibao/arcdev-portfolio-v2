@@ -66,7 +66,6 @@ const Contact = ({ location }) => {
         <SEO title="Contact" bodyBackground="#211c42" />
         <MainDiv>
             <Notifications />
-            <SocialIcon/>
             <MessageButton location={location}/>
             <div className="px-4 md:px-8">
                 <div className="flex py-2 md:py-3">
@@ -147,6 +146,9 @@ const Contact = ({ location }) => {
                         </div> 
                     </div>
                 </div>
+            </div>
+            <div className="flex mx-auto fixed bottom-0 mb-2 w-full">
+                <SocialIcon/>
             </div>
         </MainDiv>
         </>

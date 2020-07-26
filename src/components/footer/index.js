@@ -7,10 +7,12 @@ import SocialIcon from "../social"
 const Footer = () => (
     <Section>
         <SectionContent>
-            <div>
+            <div className="flex mx-auto">
                 <SocialIcon />
             </div>
+            <div>
             <Text>@arcdev</Text>
+            </div>
         </SectionContent>
     </Section>
 )
@@ -20,10 +22,7 @@ const Section = styled.section`
 `
 
 const SectionContent = styled.div`
-    ${tw`flex 
-        justify-center 
-        w-full 
-        mx-auto 
+    ${tw`w-full 
         mb-2
         md:mb-6`}
 `

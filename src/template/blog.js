@@ -27,7 +27,8 @@ const Template = ({data, location}) => {
                 <div
                     className="blog-post-content"
                     dangerouslySetInnerHTML={{ __html: html }}
-                />
+                >
+                </div>
             </div>
         </div>
         <Blogs blogs={blogs}/>
@@ -37,12 +38,12 @@ const Template = ({data, location}) => {
 
 const BackButton = styled.button`
     ${tw`mt-16 mb-4 
-      text-purple-600 
+      text-purple-400 
       text-sm
       md:text-base
       font-normal 
       focus:outline-none 
-      hover:text-purple-700`}
+      hover:text-purple-500`}
 `
 
 export const pageQuery = graphql`

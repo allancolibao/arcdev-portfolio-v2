@@ -55,7 +55,11 @@ const About = () => (
                         className="hidden lg:block">
                     <Image />
                 </div>
-                <div className="mt-0 lg:mt-10">
+                <div    data-sal="fade"
+                        data-sal-duration="900"
+                        data-sal-delay="300"
+                        data-sal-easing="ease"
+                        className="mt-0 lg:mt-10">
                     <ContactInfo>
                         <Marker className="inline-block w-4 md:w-5 lg:w-6 h-auto mr-1 md:mr-2"/> 
                         <Content layout="inline-block" text="Manila, Philippines"/>

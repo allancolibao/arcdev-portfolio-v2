@@ -33,11 +33,11 @@ const SocialIcon = () => (
 )
 
 const Social = styled.div`
-    ${tw`lg:fixed left-0 bottom-0 mb-6 ml-2 z-20 `}
+    ${tw`relative lg:fixed lg:left-0 lg:bottom-0 lg:mb-6 lg:ml-2 lg:z-20 mx-auto`}
 `
 
 const socialIcon = {
-    style: "inline-block lg:block w-8 md:w-12 px-1 md:px-3 lg:px-2 my-3 h-auto text-purple-600 transition duration-500 ease-in-out transform hover:scale-125 hover:text-purple-400"
+    style: "inline-block lg:block w-8 md:w-12 px-1 md:px-2 my-3 h-auto text-purple-600 transition duration-500 ease-in-out transform hover:scale-125 hover:text-purple-400"
 }
 
 export default SocialIcon

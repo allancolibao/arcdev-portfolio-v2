@@ -61,7 +61,7 @@ const Paragraph = styled.p`
 `
 
 const Tag = styled.small`
-    ${tw`text-xs md:text-sm font-thin md:font-light px-3 bg-purple-500 text-gray-200 rounded-sm`}
+    ${tw`text-xs lg:text-sm font-thin lg:font-light px-3 bg-purple-500 text-gray-200 rounded-sm`}
 `
 
 const Label = styled.h6`
