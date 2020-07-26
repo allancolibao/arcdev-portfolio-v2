@@ -49,12 +49,33 @@ const Grid = styled.div`
 `
 
 const Card = styled.div`
-    ${tw`relative overflow-hidden px-3 md:px-4 lg:pl-20 xl:pl-24 lg:pr-5 py-3 md:py-4 lg:py-5 shadow-lg md:shadow-xl bg-purple-900`}
+    ${tw`relative 
+    overflow-hidden 
+    px-3 
+    md:px-4 
+    lg:pl-20 
+    xl:pl-24 
+    lg:pr-5 
+    py-3 
+    md:py-4 
+    lg:py-5 
+    shadow-lg 
+    md:shadow-xl 
+    bg-purple-900`}
     min-height: 320px;
 `
 
 const View = styled.div`
-    ${tw`absolute flex right-0 bottom-0 mb-3 md:mb-5 lg:mb-6 mr-3 md:mr-5 lg:mr-6`}
+    ${tw`absolute 
+    flex 
+    right-0 
+    bottom-0 
+    mb-3 
+    md:mb-5 
+    lg:mb-6 
+    mr-3 
+    md:mr-5 
+    lg:mr-6`}
 `
 
 const ReadMore = styled.button`
