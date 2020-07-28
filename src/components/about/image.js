@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const Image = () => {
+const Image = ({layout}) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "new-dp.jpg" }) {
@@ -17,7 +17,7 @@ const Image = () => {
   `)
 
   return <Img fluid={data.file.childImageSharp.fluid} 
-              className="shadow-xl mt-10" 
+              className={layout} 
               alt="Allan Colibao"
           />
 }

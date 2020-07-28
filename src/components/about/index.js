@@ -53,7 +53,7 @@ const About = () => (
                         data-sal-delay="300"
                         data-sal-easing="ease"
                         className="hidden lg:block">
-                    <Image />
+                    <Image  layout="shadow-xl lg:mt-6 xl:mt-10"/>
                 </div>
                 <div    data-sal="fade"
                         data-sal-duration="900"
