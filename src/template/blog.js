@@ -33,7 +33,7 @@ const Template = ({data, location}) => {
                           <Image layout="shadow-lg border rounded-full border-gray-100"/>
                         </div>
                         <div className="w-3/4">
-                          <h1 className="text-gray-200 text-base font-normal">Allan Reyes Colibao</h1>
+                          <h1 className="text-gray-100 text-base font-normal">Allan Reyes Colibao</h1>
                           <h2 className="text-purple-200 text-sm font-light">@allancolibao</h2>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ const Template = ({data, location}) => {
                           <Link key={i} to={`/${blog.slug}`}>
                             <div className="p-4">
                               <li className="m-0">{blog.title}</li>
-                              <small className="text-gray-600">{blog.date_posted}</small>
+                              <small className="text-gray-500">{blog.date_posted}</small>
                             </div>
                           </Link>
                         ) : ""
