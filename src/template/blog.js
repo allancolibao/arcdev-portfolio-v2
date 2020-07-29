@@ -8,6 +8,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/about/image"
+import Loader from "../components/loader"
 
 const Template = ({data, location}) => {
 
@@ -46,7 +47,7 @@ const Template = ({data, location}) => {
                               <small className="text-gray-500">{blog.date_posted}</small>
                             </div>
                           </Link>
-                        ) : ""
+                        ) : <Loader/>
                       }
                       </ul>
                     </div>
