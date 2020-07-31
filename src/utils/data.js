@@ -27,8 +27,11 @@ const SelectedProjects = () => {
 const BlogList = () => {
     
     const [blogs, setBLogs] =  useState()
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
+        setIsLoading(true)
+        
         firebase
         .firestore()
         .collection("/blogs")
@@ -39,10 +42,11 @@ const BlogList = () => {
                     ...doc.data(),   
             }))
             setBLogs(lists)
+            setTimeout(() => setIsLoading(false), 1000)
         })
     }, [])
 
-    return [blogs]
+    return [blogs, isLoading]
 }
 
 const Repos = () => {
