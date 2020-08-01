@@ -24,7 +24,7 @@ const Skeleton = ({count, layout}) => {
     )
 }
 
-const LoaderEffectColorOne = "rgba(191, 191, 191, 0.40)"
+const LoaderEffectColorOne = "#BCBCBC42"
 
 const LoaderEffectColorTwo = "#E3E3E3"
 

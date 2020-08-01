@@ -10,6 +10,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/about/image"
 import Skeleton from "../components/skeleton"
+import SocialIcon from "../components/social"
 
 const Template = ({data, location}) => {
 
@@ -26,18 +27,18 @@ const Template = ({data, location}) => {
        <SEO title="Blog" bodyBackground="#211c42"/>
        <BackButton onClick={() => goBack()} >{"<< Go back"}</BackButton>
         <div className="blog-post-container">
-            <div className="blog-post flex">
-                <div className="w-1/4 pr-8">
-                    <div className="flex items-center justify-center bg-gray-600 p-2">
-                        <div className="w-1/4 mr-4">
-                          <Image layout="shadow-lg border rounded-full border-gray-100"/>
+            <div className="blog-post block lg:flex">
+                <div className="w-full lg:w-1/4 lg:pr-8">
+                    <div className="block lg:flex items-center justify-center lg:bg-gray-600 p-2 mb-4 lg:mb-0">
+                        <div className="w-full lg:w-1/4 lg:mr-4">
+                          <Image layout="mx-auto mb-2 lg:mb-0 w-12 md:w-16 lg:w-auto shadow-lg border rounded-full border-gray-100"/>
                         </div>
-                        <div className="w-3/4">
-                          <h1 className="text-gray-100 text-base font-normal">Allan Reyes Colibao</h1>
-                          <h2 className="text-purple-200 text-sm font-light">@allancolibao</h2>
+                        <div className="w-full lg:w-3/4 text-center lg:text-left">
+                          <h1 className="text-gray-100 text-xs xl:text-base font-normal">Allan Reyes Colibao</h1>
+                          <h2 className="text-purple-200 text-xs xl:text-sm font-light">@allancolibao</h2>
                         </div>
                     </div>
-                    <SideBar className="">
+                    <SideBar>
                       <ul className="list-none">
                       {isLoading ? new Array(4).fill(1).map((_, i) => {
                           return  ( 
@@ -62,15 +63,25 @@ const Template = ({data, location}) => {
                       </ul>
                     </SideBar>
                 </div>
-                <div
-                    className="blog-post-content w-3/4"
+                <MainSection
                     dangerouslySetInnerHTML={{ __html: html }}
                 >
-                </div>
+                </MainSection>
             </div>
+        </div>
+        <div className="flex mx-auto">
+          <SocialIcon />
         </div>
     </Layout>
   )
+}
+
+const size = {
+  laptop: '1024px'
+}
+
+export const device = {
+  laptop: `(min-width: ${size.laptop})`
 }
 
 const fadeIn = keyframes`
@@ -84,16 +95,27 @@ const fadeIn = keyframes`
 
 const SideBar = styled.div`
     ${tw`text-gray-400 
+      hidden
+      lg:block
       mt-4 
       text-xs 
       shadow-lg 
-      bg-purple-900`}
+      bg-purple-900
+      lg:overflow-y-scroll`}
+      height: 22rem;
 `
 
 const SideBarBlogList = styled.div`
     ${tw`p-4`}
     animation: ${fadeIn} 
     2s;
+`
+
+const MainSection = styled.div`
+    ${tw`w-full lg:w-3/4 lg:overflow-y-scroll lg:pr-8`}
+    @media ${device.laptop} { 
+      height: 45rem;
+    }   
 `
 
 const BackButton = styled.button`
