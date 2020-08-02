@@ -5,7 +5,7 @@ import tw from 'twin.macro'
 import SocialIcon from "../social"
 
 const Footer = ({isHomepage}) => (
-    <Section className={isHomepage ? "" : "hidden"}>
+    <Section className={isHomepage ? null : "hidden"}>
         <SectionContent>
             <div className="flex mx-auto">
                 <SocialIcon />

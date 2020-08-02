@@ -8,7 +8,7 @@ const SelectedProjects = () => {
     const [projects, setProjects] =  useState()
 
     useEffect(() => {
-        firebase
+        const unSubscribe = firebase
         .firestore()
         .collection("/projects")
         .orderBy("date_added")
@@ -19,6 +19,10 @@ const SelectedProjects = () => {
             }))
             setProjects(lists)
         })
+
+        return () => {
+            unSubscribe()
+        }
     }, [])
 
     return [projects]
@@ -32,7 +36,7 @@ const BlogList = () => {
     useEffect(() => {
         setIsLoading(true)
         
-        firebase
+        const unSubscribe = firebase
         .firestore()
         .collection("/blogs")
         .orderBy("date_added")
@@ -44,6 +48,10 @@ const BlogList = () => {
             setBLogs(lists)
             setTimeout(() => setIsLoading(false), 1000)
         })
+
+        return () => {
+            unSubscribe()
+          }
     }, [])
 
     return [blogs, isLoading]
@@ -55,9 +63,16 @@ const Repos = () => {
     const [repo, setRepo] =  useState([])
 
     useEffect(() => {
+        const CancelToken = axios.CancelToken
+        const source = CancelToken.source()
+
         axios
-        .get(url)
+        .get(url, { cancelToken: source.token })
         .then(response => setRepo(response.data))
+
+        return () => {
+            source.cancel()
+          }
     }, [])
 
     return [repo]

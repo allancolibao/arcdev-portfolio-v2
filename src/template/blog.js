@@ -11,6 +11,7 @@ import SEO from "../components/seo"
 import Image from "../components/about/image"
 import Skeleton from "../components/skeleton"
 import SocialIcon from "../components/social"
+import Loader from "../components/loader"
 
 const Template = ({data, location}) => {
 
@@ -21,15 +22,16 @@ const Template = ({data, location}) => {
   const goBack = () => {
     window.history.back()
   }
-  
+
   return (
     <Layout location={location}>
+       {blogs ? null : <Loader/>}
        <SEO title="Blog" bodyBackground="#211c42"/>
        <BackButton onClick={() => goBack()} >{"<< Go back"}</BackButton>
         <div className="blog-post-container">
             <div className="blog-post block lg:flex">
                 <div className="w-full lg:w-1/4 lg:pr-8">
-                    <div className="block lg:flex items-center justify-center lg:bg-gray-600 p-2 mb-4 lg:mb-0">
+                    <div className="block lg:flex items-center justify-center  p-2 mb-4 lg:mb-0">
                         <div className="w-full lg:w-1/4 lg:mr-4">
                           <Image layout="mx-auto mb-2 lg:mb-0 w-12 md:w-16 lg:w-auto shadow-lg border rounded-full border-gray-100"/>
                         </div>
@@ -42,7 +44,7 @@ const Template = ({data, location}) => {
                       <ul className="list-none">
                       {isLoading ? new Array(4).fill(1).map((_, i) => {
                           return  ( 
-                            <div className="p-4" key={i}>
+                            <div className="py-4 px-2" key={i}>
                               <li className="m-0">
                                 <Skeleton count={1} layout="h-4 rounded-sm"/>
                               </li>
@@ -53,7 +55,7 @@ const Template = ({data, location}) => {
                           )
                         }) : blogs.map((blog, i) => 
                           <Link key={i} to={`/${blog.slug}`} className="hover:text-white">
-                            <SideBarBlogList className="p-4">
+                            <SideBarBlogList>
                               <li className="m-0">{blog.title}</li>
                               <small className="text-gray-500">{blog.date_posted}</small>
                             </SideBarBlogList>
@@ -69,6 +71,20 @@ const Template = ({data, location}) => {
                 </MainSection>
             </div>
         </div>
+        <MoreArticles>
+          <MoreArticlesHeading>More Articles</MoreArticlesHeading>
+          <ul className="list-none">
+            {!isLoading ?  blogs.map((blog, i) => 
+                <Link key={i} to={`/${blog.slug}`} className="hover:text-white">
+                  <div className="py-4 border-b border-gray-600">
+                    <li className="m-0">{blog.title}</li>
+                    <small className="text-gray-500">{blog.date_posted}</small>
+                  </div>
+                </Link>
+              ) : null
+            }
+            </ul>
+        </MoreArticles>
         <div className="flex mx-auto">
           <SocialIcon />
         </div>
@@ -99,14 +115,12 @@ const SideBar = styled.div`
       lg:block
       mt-4 
       text-xs 
-      shadow-lg 
-      bg-purple-900
       lg:overflow-y-scroll`}
       height: 22rem;
 `
 
 const SideBarBlogList = styled.div`
-    ${tw`p-4`}
+    ${tw`py-4 px-2`}
     animation: ${fadeIn} 
     2s;
 `
@@ -126,6 +140,25 @@ const BackButton = styled.button`
       font-normal 
       focus:outline-none 
       hover:text-purple-500`}
+`
+
+const MoreArticles = styled.div`
+    ${tw`block 
+      lg:hidden 
+      text-gray-400 
+      text-xs 
+      md:text-sm 
+      my-10`}
+`
+const MoreArticlesHeading = styled.h1`
+    ${tw`text-xl 
+      md:text-3xl 
+      lg:text-4xl 
+      xl:text-5xl 
+      font-black 
+      text-purple-400 
+      leading-tight 
+      mb-4`}
 `
 
 export const pageQuery = graphql`
