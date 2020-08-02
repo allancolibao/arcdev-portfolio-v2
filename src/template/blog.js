@@ -41,6 +41,7 @@ const Template = ({data, location}) => {
                         </div>
                     </div>
                     <SideBar>
+                      <SideBarMoreArticlesHeading>More Articles</SideBarMoreArticlesHeading>
                       <ul className="list-none">
                       {isLoading ? new Array(4).fill(1).map((_, i) => {
                           return  ( 
@@ -116,7 +117,7 @@ const SideBar = styled.div`
       mt-4 
       text-xs 
       lg:overflow-y-scroll`}
-      height: 22rem;
+      height: 25rem;
 `
 
 const SideBarBlogList = styled.div`
@@ -152,9 +153,16 @@ const MoreArticles = styled.div`
 `
 const MoreArticlesHeading = styled.h1`
     ${tw`text-xl 
-      md:text-3xl 
-      lg:text-4xl 
-      xl:text-5xl 
+      md:text-2xl 
+      font-black 
+      text-purple-400 
+      leading-tight 
+      mb-4`}
+`
+
+const SideBarMoreArticlesHeading = styled.h1`
+    ${tw`px-2
+      text-lg
       font-black 
       text-purple-400 
       leading-tight 
