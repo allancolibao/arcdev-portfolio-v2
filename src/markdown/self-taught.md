@@ -1,9 +1,9 @@
 ---
 slug: "/blog/self-taught"
-title: "How I Became a Self-Taught Software Engineer"
+title: "How I Became a Self-Taught Front-end Developer"
 ---
 
-<h1 class="text-xl md:text-3xl lg:text-4xl font-black text-gray-400 leading-tight mb-8">How I Became a Self-Taught Software Engineer</h1>
+<h1 class="text-xl md:text-3xl lg:text-4xl font-black text-gray-400 leading-tight mb-8">How I Became a Self-Taught Front-end Developer</h1>
 
 <p class="text-xs md:text-sm xl:text-base text-gray-600 leading-relaxed mb-6">Lorem Ipsum is simply dummy text of the printing and 
 typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 

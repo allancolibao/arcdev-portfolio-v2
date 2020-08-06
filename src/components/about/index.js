@@ -26,7 +26,7 @@ const About = () => (
 
                 <Content layout="pb-3 md:pb-4 lg:pb-6"
                 text="Earlier in 2019,  I started working as a Web Developer. And as part of my role, 
-                I was involved in developing an application providing efficient and effective means 
+                I was involved in the development of applications providing efficient and effective means 
                 of data collection and management using technologies JavaScript and PHP."
                 />
 
@@ -43,7 +43,7 @@ const About = () => (
                 <Heading layout="pb-1 md:pb-2" text="Education"/>
                 <SubHeading layout="pb-1 md:pb-2" text="Electronics and Computer Engineering Technology"/>
                 <Content text="2010 - 2013"/>
-                <Content layout="pb-4 md:pb-6 lg:pb-10" text="Computer Systems Technological College, Inc."/>
+                <Content layout="pb-4 md:pb-6 lg:pb-10" text="College of Sciences, Technology and Communications, Inc."/>
 
                 
             </div>
