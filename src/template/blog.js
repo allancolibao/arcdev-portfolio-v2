@@ -129,7 +129,7 @@ const SideBarBlogList = styled.div`
 const MainSection = styled.div`
     ${tw`w-full lg:w-3/4 lg:overflow-y-scroll lg:pr-8`}
     @media ${device.laptop} { 
-      height: 45rem;
+      height: 48rem;
     }   
 `
 
