@@ -24,17 +24,17 @@ You can use this repository on your project and giving proper credits is very mu
 
 **Start the site in `develop` mode.**
 
-   ```shell
-   gatsby develop
+```shell
+gatsby develop
 
-   ```
+```
 
 **Ready in `production` mode.**
 
-    ```shell
-    gatsby build
+```shell
+gatsby build
 
-    ```
+```
 
 ### 🔎 See live 
 
