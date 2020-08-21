@@ -1,17 +1,42 @@
-## Arcdev Portfolio Version II
+<p align="center">
+  <a href="https://arcdev.me">
+    <img alt="Arcdev V2" src="https://arcdev.me/static/ecfdddbc7c5eb967f1a916b5880e86c6/1b595/arcdev-logo.png" width="80" />
+  </a>
+</p>
 
-This project was built with [Gatsbyjs](https://www.gatsbyjs.org/) 
+<h1 align="center">
+  Arcdev Portfolio Version II
+</h1>
 
-## Available Scripts
+<p align="center">
+  I've spent three months building this thing. I'm so happy and proud to show the improvement from the previous version of my portfolio.
+</p>
 
-In the project directory, you can run:
+## 😀 About this project
 
-### `gatsby develop`
+This project was built using [Gatsbyjs](https://www.gatsbyjs.org/) 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:8000](http://localhost:8000) to view it in the browser.
+Full documentation for Gatsby lives [on the website](https://gatsbyjs.com/).
 
-## Visit me
-@arcdev2019
+## 🚀 Fork this repo and run
+
+**Start the site in `develop` mode.**
+
+   ```shell
+   gatsby develop
+   ```
+
+**Ready in `production` mode.**
+
+    ```shell
+    gatsby build
+    ```
+
+### 🔎 See live 
 
 See [My Portfolio](https://arcdev.me).
+
+
+## 🙏 Thank you
+
+@arcdev
