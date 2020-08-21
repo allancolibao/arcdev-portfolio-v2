@@ -12,31 +12,31 @@ const BottomNavigation = () => (
     <NavList>
         <MenuLink>
             <Link href="#home">
-                <Home className="h-auto w-6 md:w-8 mx-auto"/>
+                <Home className="h-auto w-8 md:w-10 mx-auto"/>
                 {/* Home */}
             </Link>
         </MenuLink>
         <MenuLink>
             <Link href="#projects">
-                <Projects className="h-auto w-6 md:w-8 mx-auto" />
+                <Projects className="h-auto w-8 md:w-10 mx-auto" />
                 {/* Projects */}
             </Link>
         </MenuLink>
         <MenuLink>
             <Link href="#repository">
-                <Repository className="h-auto w-6 md:w-8 mx-auto" />
+                <Repository className="h-auto w-8 md:w-10 mx-auto" />
                 {/* Repositories */}
             </Link>
         </MenuLink>
         <MenuLink>
             <Link href="#blog">
-                <Blogs className="h-auto w-6 md:w-8 mx-auto" />
+                <Blogs className="h-auto w-8 md:w-10 mx-auto" />
                 {/* Blogs */}
             </Link>
         </MenuLink>
         <MenuLink>
             <Link href="#about">
-                <About className="h-auto w-6 md:w-8 mx-auto" />
+                <About className="h-auto w-8 md:w-10 mx-auto" />
                 {/* About */}
             </Link>
         </MenuLink>
@@ -51,10 +51,10 @@ const NavList = styled.div`
         bottom-0 
         w-full 
         z-30 
-        py-3 
-        md:py-4 
-        px-2 
-        md:px-6 
+        py-4 
+        md:py-5 
+        px-6 
+        md:px-8 
         lg:hidden`}
         background-color:#211c42;
         box-shadow: 0px 36px 55px 2px rgba(0,0,0,0.51);

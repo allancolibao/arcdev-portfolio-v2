@@ -11,7 +11,7 @@ import Phone from "../../images/svgs/phone.svg";
 
 const About = () => (
     <Section id="about">
-        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="About me"/>
+        <SectionTitle layout="pb-6 md:pb-8 lg:pb-10" text="About me"/>
         <SectionContent> 
             <div className="w-full xl:w-1/2 pr-0 lg:pr-12 xl:pr-16" 
                 data-sal="fade"

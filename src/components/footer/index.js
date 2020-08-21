@@ -18,7 +18,7 @@ const Footer = ({isHomepage}) => (
 )
 
 const Section = styled.section`
-    ${tw`mb-16 md:mb-24 lg:mb-0 mt-12 md:mt-16 lg:mt-24`}
+    ${tw`mb-20 md:mb-24 lg:mb-0 mt-12 md:mt-16 lg:mt-24`}
 `
 
 const SectionContent = styled.div`

@@ -25,7 +25,7 @@ const Repository = ({repos}) => {
     
     return( 
     <Section id="repository">
-        <SectionTitle layout="pb-4 md:pb-6 lg:pb-10" text="GitHub Repositories"/>
+        <SectionTitle layout="pb-6 md:pb-8 lg:pb-10" text="GitHub Repositories"/>
         <SectionContent 
             data-sal="fade"
             data-sal-duration="900"

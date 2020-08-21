@@ -1,7 +1,7 @@
 exports.createPages = async ({ actions, graphql, reporter }) => {
     const { createPage } = actions
   
-    const blogTemplate = require.resolve(`./src/template/blog.js`)
+    const blogTemplate = require.resolve(`./src/templates/blog.js`)
   
     const result = await graphql(`
       {
@@ -33,4 +33,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         },
       })
     })
+  }
+
+  exports.onCreateWebpackConfig = ({ actions, stage }) => {
+    if (stage === 'build-javascript') {
+      actions.setWebpackConfig({
+        devtool: false,
+      })
+    }
   }

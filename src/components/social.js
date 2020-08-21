@@ -37,7 +37,7 @@ const Social = styled.div`
 `
 
 const socialIcon = {
-    style: "inline-block lg:block w-8 md:w-12 px-1 md:px-2 my-3 h-auto text-purple-600 transition duration-500 ease-in-out transform hover:scale-125 hover:text-purple-400"
+    style: "inline-block lg:block w-10 md:w-12 px-1 md:px-2 my-3 h-auto text-purple-600 transition duration-500 ease-in-out transform hover:scale-125 hover:text-purple-400"
 }
 
 export default SocialIcon

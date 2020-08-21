@@ -28,7 +28,7 @@ const Hero = () => (
                         data-sal-duration="900"
                         data-sal-delay="500"
                         data-sal-easing="ease"
-                        className="text-gray-600"
+                        className="text-gray-500"
             >
                 Front-end Developer
             </Heading>
@@ -64,15 +64,15 @@ const StyledDiv = styled.div`
 `
 
 const Heading = styled.h1`
-    ${tw`text-2xl md:text-4xl lg:text-5xl font-black`}
+    ${tw`text-3xl md:text-4xl lg:text-5xl font-black`}
 `
 
 const SubHeading = styled.p`
-    ${tw`text-sm md:text-xl lg:text-2xl font-normal py-2 md:py-3 lg:py-5`}
+    ${tw`text-lg md:text-xl lg:text-2xl font-normal py-2 md:py-3 lg:py-5`}
     color: #e3e3e3;
 `
 const Text = styled.p`
-    ${tw`text-xs md:text-base lg:text-lg font-thin py-2 md:py-3 lg:py-5 leading-loose`}
+    ${tw`text-sm md:text-base lg:text-lg font-thin py-2 md:py-3 lg:py-5 leading-loose`}
     color: #cfcfcf;
 `
 

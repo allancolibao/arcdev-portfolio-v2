@@ -2,9 +2,19 @@ require('dotenv').config({ path: '.env' })
 
 module.exports = {
   siteMetadata: {
-    title: `Allan Colibao`,
-    description: `Front-End Software Engineer`,
+    title: `Allan Colibao - Front-end Developer`,
+    description: `I'm Allan Reyes Colibao. I am a design-oriented 
+                  front-end developer who loves to build complex 
+                  interactive web applications. 
+                  Welcome to my portfolio version II`,
     author: `@allancolibao`,
+    url: `https://arcdev.me`,
+    image: `/static/images/arcdev.jpg`,
+    backgroundColor: `#211c42`,
+    keyWords:`Allan Colibao, Arcdev, 
+            Arcdev Portfolio, Allan Colibao Portfolio, 
+            Personal Portfolio, Front-end Developer, 
+            Web Developer, Software Engineer`,
     menuLinks:[
         {
           name:'Home',
@@ -29,6 +39,13 @@ module.exports = {
       ]
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GATSBY_ANALYTICS_TRACKING_ID,
+        head: true,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -45,8 +62,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#211c42`,
+        theme_color: `#211c42`,
         display: `minimal-ui`,
         icon: `src/images/arcdev-logo.png`,
       },

@@ -40,14 +40,14 @@ const spin = keyframes`
 const Button = styled.button`
     ${tw`fixed
         rounded-full
-        h-10
-        w-10 
+        h-12
+        w-12 
         md:h-12 
         md:w-12 
         bg-purple-600  
         bottom-0 
         shadow-xl
-        mb-16
+        mb-20
         mr-4
         md:mr-8
         md:mb-24
@@ -69,14 +69,14 @@ const Button = styled.button`
 const CloseButton = styled.button`
     ${tw`fixed
         rounded-full 
-        h-10
-        w-10 
+        h-12
+        w-12 
         md:h-12 
         md:w-12 
         bg-white  
         bottom-0 
         shadow-xl 
-        mb-16
+        mb-20
         mr-4
         md:mr-8
         md:mb-24

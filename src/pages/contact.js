@@ -57,16 +57,15 @@ const Contact = ({ location }) => {
           })
     }
 
-    if (isLoading) {
-        return <Loader/>
-    }
+    if (typeof window === 'undefined') { return null }
     
     return (
         <>
-        <SEO title="Contact" bodyBackground="#211c42" />
+        <SEO title="Contact | Allan Colibao - Front-end Developer"/>
         <MainDiv>
             <Notifications />
             <MessageButton location={location}/>
+            {isLoading ? <Loader/> : null}
             <div className="px-4 md:px-8">
                 <div className="flex py-2 md:py-3">
                     <LogoMessage />

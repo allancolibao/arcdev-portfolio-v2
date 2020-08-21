@@ -36,8 +36,7 @@ const GithubCount = ({text, layout}) =>
     <Count className={layout}>{text}</Count>
 
 const Title = styled.h2`
-    ${tw`text-lg md:text-2xl lg:text-4xl font-bold`}
-    color: #ab7dff;
+    ${tw`text-xl md:text-2xl lg:text-4xl font-black text-purple-400`}
 `
 
 const Head = styled.h5`

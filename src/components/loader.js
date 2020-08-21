@@ -3,12 +3,12 @@ import styled from "@emotion/styled"
 import tw from 'twin.macro'
 import { keyframes } from '@emotion/core'
 
+import ArcdevLogo from "../images/svgs/arcdev-logo.svg";
+
 const  Loader = () => (
     <MainDiv>
         <LoaderDiv>
-            <span className="rounded-full bg-white h-2 w-2 md:h-3 md:w-3 mx-1 inline-block"></span>
-            <span className="rounded-full bg-white h-2 w-2 md:h-3 md:w-3 mx-1 inline-block"></span>
-            <span className="rounded-full bg-white h-2 w-2 md:h-3 md:w-3 mx-1 inline-block"></span>
+            <ArcdevLogo className="w-16 md:w-24"/>
         </LoaderDiv>
     </MainDiv>
 )   
@@ -19,27 +19,38 @@ const MainDiv = styled.div`
     background-color: #211c42;
 `
 
-const bounce = keyframes`
-  from, 20%, 53%, 80%, to {
-    transform: translate3d(0,0,0);
-  }
-
-  40%, 43% {
-    transform: translate3d(0, -30px, 0);
-  }
-
-  70% {
-    transform: translate3d(0, -15px, 0);
-  }
-
-  90% {
-    transform: translate3d(0,-4px,0);
+const beat = keyframes`
+  {
+    0%
+    {
+      transform: scale( .85 );
+    }
+    20%
+    {
+      transform: scale( 1 );
+    }
+    40%
+    {
+      transform: scale( .85 );
+    }
+    60%
+    {
+      transform: scale( 1 );
+    }
+    80%
+    {
+      transform: scale( .85 );
+    }
+    100%
+    {
+      transform: scale( .85 );
+    }
   }
 `
 
 const LoaderDiv = styled.div`
     ${tw`m-auto`}
-    animation: ${bounce} 1s ease infinite;
+    animation: ${beat} 2s ease infinite;
 `
 
 export default Loader;

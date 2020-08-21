@@ -23,10 +23,12 @@ const Template = ({data, location}) => {
     window.history.back()
   }
 
+  if (typeof window === 'undefined') { return <Loader/> }
+
   return (
     <Layout location={location}>
-       {blogs ? null : <Loader/>}
-       <SEO title="Blog" bodyBackground="#211c42"/>
+      {blogs ? null : <Loader/>}
+       <SEO title="Blog | Allan Colibao - Front-end Developer"/>
        <BackButton onClick={() => goBack()} >{"<< Go back"}</BackButton>
         <div className="blog-post-container">
             <div className="blog-post block lg:flex">

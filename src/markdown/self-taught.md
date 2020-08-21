@@ -1,6 +1,6 @@
 ---
-slug: "/blog/self-taught"
-title: "How I Became a Self-Taught Front-end Developer"
+slug: /blog/self-taught
+title: How I Became a Self-Taught Front-end Developer
 ---
 
 <h1 class="text-xl md:text-3xl lg:text-4xl font-black text-gray-400 leading-tight mb-8">How I Became a Self-Taught Front-end Developer</h1>

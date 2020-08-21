@@ -17,9 +17,11 @@ const IndexPage = ({location}) => {
   const [ blogs ] = BlogList();
   const [ repos ] = Repos();
 
+  if (typeof window === 'undefined') { return null }
+
   return(
     <Layout location={location}>
-      <SEO title="Front-end Developer" bodyBackground="#211c42"/>
+      <SEO title="Home | Allan Colibao - Front-end Developer"/>
       <Hero />
       <Projects projects={projects}/>
       <Repository repos={repos}/>
