@@ -37,9 +37,7 @@ const Hero = () => (
                         data-sal-delay="500"
                         data-sal-easing="ease"
             >
-                Are you searching for a talented developer 
-                with proven skills to develop a complex 
-                web application? Check out my{" "}
+                Designing and developing modern web pages. Check out my{" "}
                 <Link href="#projects">featured work</Link> 
                 {" "}and{" "}<Link href="#blog">blog</Link>.
             </Text>
