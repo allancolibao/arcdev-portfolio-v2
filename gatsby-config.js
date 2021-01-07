@@ -59,8 +59,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Arcdev Portfolio V2`,
+        short_name: `arcdev-v2`,
         start_url: `/`,
         background_color: `#211c42`,
         theme_color: `#211c42`,
