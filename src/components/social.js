@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 
 import Instagram from "../images/svgs/instagram.svg";
 import Twitter from "../images/svgs/twitter.svg";
-import Behance from "../images/svgs/behance.svg";
+import NPM from "../images/svgs/npm.svg";
 import Github from "../images/svgs/github.svg";
 import LinkedIn from "../images/svgs/linked-in.svg";
 
@@ -20,8 +20,8 @@ const SocialIcon = () => (
         <a href="https://twitter.com/allancolibao" target="blank">
             <Twitter className={socialIcon.style} />
         </a>
-        <a href="https://www.behance.net/arcolibao" target="blank">
-            <Behance className={socialIcon.style} />
+        <a href="https://www.npmjs.com/~allancolibao" target="blank">
+            <NPM className={socialIcon.style} />
         </a>
         <a href="https://github.com/allancolibao" target="blank">
             <Github className={socialIcon.style} />
