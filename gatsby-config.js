@@ -8,7 +8,7 @@ module.exports = {
                   interactive web applications. 
                   Welcome to my portfolio version II`,
     author: `@allancolibao`,
-    url: `https://arcdev.me`,
+    siteUrl: `https://www.arcdev.me/`,
     image: `/static/images/arcdev.jpg`,
     backgroundColor: `#211c42`,
     keyWords:`Allan Colibao, Arcdev, 
@@ -120,5 +120,14 @@ module.exports = {
       }
     },
     `gatsby-plugin-transition-link`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.arcdev.me',
+        sitemap: 'https://www.arcdev.me/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    }
   ],
 }
