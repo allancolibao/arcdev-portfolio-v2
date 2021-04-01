@@ -89,7 +89,7 @@ const Section = styled.section`
 `
 
 const SectionContent = styled.div`
-    ${tw`block md:flex`}
+    ${tw`flex justify-center w-full`}
 `
 
 const Grid = styled.div`
