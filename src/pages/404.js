@@ -1,13 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import { isBrowser } from "../utils/browser"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PageNotFound from "../images/svgs/page-not-found.svg";
 
 const NotFoundPage = ({ location }) => { 
 
-    if (typeof window === 'undefined') { return null }
+    if (!isBrowser()){ return null }
 
     return(
     <Layout location={location}>

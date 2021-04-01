@@ -6,6 +6,7 @@ import styled from "@emotion/styled"
 import { keyframes } from '@emotion/core'
 import tw from 'twin.macro'
 
+import { isBrowser } from "../utils/browser"
 import SEO from "../components/seo"
 import LogoMessage from "../components/contact/logo"
 import Loader from "../components/loader"
@@ -57,7 +58,7 @@ const Contact = ({ location }) => {
           })
     }
 
-    if (typeof window === 'undefined') { return null }
+    if (!isBrowser()){ return null }
     
     return (
         <>

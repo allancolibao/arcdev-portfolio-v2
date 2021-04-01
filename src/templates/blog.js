@@ -6,6 +6,7 @@ import tw from 'twin.macro'
 import { Link } from "gatsby"
 import { keyframes } from '@emotion/core'
 
+import { isBrowser } from "../utils/browser"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/about/image"
@@ -23,7 +24,7 @@ const Template = ({data, location}) => {
     window.history.back()
   }
 
-  if (typeof window === 'undefined') { return <Loader/> }
+  if (!isBrowser()) { return <Loader/> }
 
   return (
     <Layout location={location}>

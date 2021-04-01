@@ -1,6 +1,7 @@
 import React from "react"
 import { SelectedProjects, BlogList, Repos } from "../utils/data"
 
+import { isBrowser } from "../utils/browser"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
@@ -17,7 +18,7 @@ const IndexPage = ({location}) => {
   const [ blogs ] = BlogList();
   const [ repos ] = Repos();
 
-  if (typeof window === 'undefined') { return null }
+  if (!isBrowser()){ return null }
 
   return(
     <Layout location={location}>
