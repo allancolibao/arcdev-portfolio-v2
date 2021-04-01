@@ -89,7 +89,7 @@ const Section = styled.section`
 `
 
 const SectionContent = styled.div`
-    ${tw`flex justify-center w-full`}
+    ${tw`flex justify-center`}
 `
 
 const Grid = styled.div`
@@ -100,6 +100,7 @@ const Card = styled.div`
     ${tw`relative 
     overflow-hidden 
     p-3 md:p-5 
+    w-full
     lg:p-6 
     shadow-lg 
     md:shadow-xl 
