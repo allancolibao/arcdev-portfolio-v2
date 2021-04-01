@@ -9,7 +9,7 @@ module.exports = {
                   Welcome to my portfolio version II`,
     author: `@allancolibao`,
     siteUrl: `https://www.arcdev.me/`,
-    image: `/static/images/arcdev.jpg`,
+    image: `/static/images/arcdev.png`,
     backgroundColor: `#211c42`,
     keywords:`Allan Colibao, Arcdev, 
             Arcdev Portfolio, Allan Colibao Portfolio, 

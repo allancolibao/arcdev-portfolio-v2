@@ -56,6 +56,10 @@ function SEO({ description, lang, meta, title}) {
           content: `website`,
         },
         {
+          name: `twitter:site`,
+          content: site.siteMetadata?.author || ``,
+        },
+        {
           name: `twitter:creator`,
           content: site.siteMetadata?.author || ``,
         },
@@ -68,6 +72,10 @@ function SEO({ description, lang, meta, title}) {
           content: metaDescription,
         },
       ].concat(metaImage ? [
+        {
+          property: `image`,
+          content: metaImage
+        },
         {
           property: `og:image`,
           content: metaImage
@@ -99,6 +107,10 @@ function SEO({ description, lang, meta, title}) {
         content: keywords,
       }
       )
+      .concat({
+        name: `google-site-verification`,
+        content: process.env.GATSBY_GOOGLE_VERFICATION,
+      })
       .concat(meta)}
     />
   )
