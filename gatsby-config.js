@@ -11,7 +11,7 @@ module.exports = {
     siteUrl: `https://www.arcdev.me/`,
     image: `/static/images/arcdev.jpg`,
     backgroundColor: `#211c42`,
-    keyWords:`Allan Colibao, Arcdev, 
+    keywords:`Allan Colibao, Arcdev, 
             Arcdev Portfolio, Allan Colibao Portfolio, 
             Personal Portfolio, Front-end Developer, 
             Web Developer, Software Engineer`,
@@ -120,6 +120,12 @@ module.exports = {
       }
     },
     `gatsby-plugin-transition-link`,
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.arcdev.me`,
+      },
+    },
     `gatsby-plugin-sitemap`,
     {
       resolve: 'gatsby-plugin-robots-txt',

@@ -12,10 +12,10 @@ function SEO({ description, lang, meta, title}) {
             title
             description
             author
-            url
+            siteUrl
             image
             backgroundColor
-            keyWords
+            keywords
           }
         }
       }
@@ -23,6 +23,8 @@ function SEO({ description, lang, meta, title}) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const metaImage = `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`
+  const keywords = site.siteMetadata.keywords || ``
 
   return (
     <Helmet
@@ -35,15 +37,15 @@ function SEO({ description, lang, meta, title}) {
       meta={[
         {
           name: `description`,
-          content: metaDescription,
-        },
-        {
-          name: `keywords`,
-          content: site.siteMetadata.keyWords,
+          content: metaDescription
         },
         {
           property: `og:title`,
           content: title,
+        },
+        {
+          property: `og:url`,
+          content: site.siteMetadata.siteUrl,
         },
         {
           property: `og:description`,
@@ -54,20 +56,8 @@ function SEO({ description, lang, meta, title}) {
           content: `website`,
         },
         {
-          property: `og:url`,
-          content: site.siteMetadata.url,
-        },
-        {
-          property: `og:image`,
-          content: `${site.siteMetadata.url}${site.siteMetadata.image}`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: site.siteMetadata?.author || ``,
         },
         {
           name: `twitter:title`,
@@ -77,7 +67,39 @@ function SEO({ description, lang, meta, title}) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ].concat(metaImage ? [
+        {
+          property: `og:image`,
+          content: metaImage
+        },
+        {
+          property: `og:image:alt`,
+          content: title,
+        },
+        {
+          property: 'og:image:width',
+          content: metaImage.width
+        },
+        {
+          property: 'og:image:height',
+          content: metaImage.height
+        },
+        {
+          name: `twitter:card`,
+          content: `summary_large_image`,
+        }
+      ] : [
+        {
+          name: `twitter:card`,
+          content: `summary`,
+        },
+      ])
+      .concat({
+        name: `keywords`,
+        content: keywords,
+      }
+      )
+      .concat(meta)}
     />
   )
 }
