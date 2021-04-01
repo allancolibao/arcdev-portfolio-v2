@@ -25,6 +25,7 @@ function SEO({ description, lang, meta, title}) {
   const metaDescription = description || site.siteMetadata.description
   const metaImage = `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`
   const keywords = site.siteMetadata.keywords || ``
+  const appId = ``
 
   return (
     <Helmet
@@ -45,14 +46,14 @@ function SEO({ description, lang, meta, title}) {
         },
         {
           property: `og:url`,
-          content: site.siteMetadata.siteUrl,
+          content: `${site.siteMetadata.siteUrl}/`,
         },
         {
           property: `og:description`,
           content: metaDescription,
         },
         {
-          property: `og:type`,
+          name: `og:type`,
           content: `website`,
         },
         {
@@ -73,7 +74,7 @@ function SEO({ description, lang, meta, title}) {
         },
       ].concat(metaImage ? [
         {
-          property: `image`,
+          name: `image`,
           content: metaImage
         },
         {
@@ -85,16 +86,12 @@ function SEO({ description, lang, meta, title}) {
           content: title,
         },
         {
-          property: 'og:image:width',
-          content: metaImage.width
-        },
-        {
-          property: 'og:image:height',
-          content: metaImage.height
-        },
-        {
           name: `twitter:card`,
           content: `summary_large_image`,
+        },
+        {
+          name: `twitter:image`,
+          content: metaImage,
         }
       ] : [
         {
@@ -107,9 +104,15 @@ function SEO({ description, lang, meta, title}) {
         content: keywords,
       }
       )
-      .concat({
+      .concat(
+      {
         name: `google-site-verification`,
         content: process.env.GATSBY_GOOGLE_VERFICATION,
+        
+      }, 
+      {
+        property:`fb:app_id`,
+        content: appId
       })
       .concat(meta)}
     />

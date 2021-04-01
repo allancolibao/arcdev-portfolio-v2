@@ -3,18 +3,12 @@ require('dotenv').config({ path: '.env' })
 module.exports = {
   siteMetadata: {
     title: `Allan Colibao - Front-end Developer`,
-    description: `I'm Allan Reyes Colibao. I am a design-oriented 
-                  front-end developer who loves to build complex 
-                  interactive web applications. 
-                  Welcome to my portfolio version II`,
+    description: `I'm Allan Reyes Colibao. I am a design-oriented front-end developer who loves to build complex interactive web applications. Welcome to my portfolio version II`,
     author: `@allancolibao`,
     siteUrl: `https://www.arcdev.me/`,
     image: `/static/images/arcdev.png`,
     backgroundColor: `#211c42`,
-    keywords:`Allan Colibao, Arcdev, 
-            Arcdev Portfolio, Allan Colibao Portfolio, 
-            Personal Portfolio, Front-end Developer, 
-            Web Developer, Software Engineer`,
+    keywords:`Allan Colibao, Arcdev, Arcdev Portfolio, Allan Colibao Portfolio, Personal Portfolio, Front-end Developer, Web Developer, Software Engineer`,
     menuLinks:[
         {
           name:'Home',
@@ -123,14 +117,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://www.arcdev.me`,
+        siteUrl: `https://www.arcdev.me/`,
       },
     },
     `gatsby-plugin-sitemap`,
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.arcdev.me',
+        host: 'https://www.arcdev.me/',
         sitemap: 'https://www.arcdev.me/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
