@@ -36,6 +36,10 @@ const About = () => (
 
                 <Heading layout="pb-1 md:pb-2" text="Experience"/>
 
+                <SubHeading layout="pb-1 md:pb-2" text="Full-stack Developer"/>
+                <Content text="Jan 2021 - Present"/>
+                <Content layout="pb-4 md:pb-6 lg:pb-10" text="Gigaddel Online Solutions"/>
+
                 <SubHeading layout="pb-1 md:pb-2" text="Web Developer"/>
                 <Content text="Aug 2020 - Present"/>
                 <Content layout="pb-4 md:pb-6 lg:pb-10" text="LandBank of the Philippines Resources 
@@ -43,11 +47,6 @@ const About = () => (
 
                 <SubHeading layout="pb-1 md:pb-2" text="Web Developer"/>
                 <Content text="Jul 2019 - Jul 2020"/>
-                <Content layout="pb-4 md:pb-6 lg:pb-10" text="Department of Science and Technology - 
-                Food and Nutrition Research Institute"/>
-
-                <SubHeading layout="pb-1 md:pb-2" text="IT Support Specialist"/>
-                <Content text="Jan 2019 - Jun 2019"/>
                 <Content layout="pb-4 md:pb-6 lg:pb-10" text="Department of Science and Technology - 
                 Food and Nutrition Research Institute"/>
 
