@@ -11,7 +11,7 @@ const SelectedProjects = () => {
         const unSubscribe = firebase
         .firestore()
         .collection("/projects")
-        .orderBy("date_added")
+        .orderBy("date_added", "desc")
         .onSnapshot(snapshot => {
             const lists = snapshot.docs.map(doc => ({
                     id: doc.id,
@@ -39,7 +39,7 @@ const BlogList = () => {
         const unSubscribe = firebase
         .firestore()
         .collection("/blogs")
-        .orderBy("date_added")
+        .orderBy("date_added", "desc")
         .onSnapshot(snapshot => {
             const lists = snapshot.docs.map(doc => ({
                     id: doc.id,

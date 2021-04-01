@@ -21,7 +21,7 @@ const About = () => (
                 <Heading layout="pb-1 md:pb-2" text="Hello There!"/>
                 <Content layout="pb-3 md:pb-4 lg:pb-6" 
                 text="My name is Allan Reyes Colibao. I am a design-oriented Front-end Developer 
-                who loves to build complex interactive web applications."
+                who loves to build modern web applications."
                 />
 
                 <Content layout="pb-3 md:pb-4 lg:pb-6"
