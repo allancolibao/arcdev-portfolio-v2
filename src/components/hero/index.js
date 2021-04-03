@@ -5,7 +5,7 @@ import tw from 'twin.macro'
 import Human from "../../images/svgs/human.svg";
 
 const Hero = () => (
-    <Section>
+    <Section id="home">
         <StyledDiv>
             <SubHeading data-sal="slide-up"
                         data-sal-duration="900"

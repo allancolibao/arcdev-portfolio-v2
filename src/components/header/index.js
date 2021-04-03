@@ -8,7 +8,7 @@ import Logo from "./logo"
 
 
 const Header = ({ menuLinks, scrolling, isHomepage }) => (
-    <Nav  id="home" css={scrolling ? sticky : fixed }>
+    <Nav css={scrolling ? sticky : fixed }>
       <Div>
         <Logo />
         {isHomepage ? <Navigation lists={menuLinks}/> : "" }
