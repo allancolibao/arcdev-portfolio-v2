@@ -24,8 +24,8 @@ function SEO({ defaultDescription, lang, meta, title, isBlogPost, frontmatter}) 
     `
   )
 
-  const description = defaultDescription || site.siteMetadata.description
-  const image = `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`
+  const metaDescription = defaultDescription || site.siteMetadata.description
+  const metaImage = `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`
   const keywords = site.siteMetadata.keywords || ``
   const appId = site.siteMetadata.fbAppID
   const author = site.siteMetadata.author
@@ -36,35 +36,100 @@ function SEO({ defaultDescription, lang, meta, title, isBlogPost, frontmatter}) 
 
   return (
     <React.Fragment>
-      <Helmet>
-        {/* General tags */}
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="image" content={image} />
-        <meta name="keywords" content={keywords} />
-        <meta name="author" content={author} />
-
-        {/* OpenGraph tags */}
-        <meta property="og:url" content={url} />
-        {isBlogPost ? <meta property="og:type" content="article" /> : null}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={image} />
-        <meta property="fb:app_id" content={appId} />
-
-        {/* Twitter Card tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content={author} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={image} />
-      </Helmet>
+      <Helmet
+      htmlAttributes={{
+        lang,
+      }}
+      title={title}
+      titleTemplate={`%s`}
+      bodyAttributes={{style: `background-color : ${site.siteMetadata.backgroundColor}`}}
+      meta={[
+        {
+          name: `description`,
+          content: metaDescription
+        },
+        {
+          property: `og:title`,
+          content: title,
+        },
+        {
+          property: `og:url`,
+          content: site.siteMetadata.siteUrl,
+        },
+        {
+          property: `og:description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          name: `twitter:site`,
+          content: site.siteMetadata?.author || ``,
+        },
+        {
+          name: `twitter:creator`,
+          content: site.siteMetadata?.author || ``,
+        },
+        {
+          name: `twitter:title`,
+          content: title,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
+        },
+      ].concat(metaImage ? [
+        {
+          name: `image`,
+          content: metaImage
+        },
+        {
+          property: `og:image`,
+          content: metaImage
+        },
+        {
+          property: `og:image:alt`,
+          content: title,
+        },
+        {
+          name: `twitter:card`,
+          content: `summary_large_image`,
+        },
+        {
+          name: `twitter:image`,
+          content: metaImage,
+        }
+      ] : [
+        {
+          name: `twitter:card`,
+          content: `summary`,
+        },
+      ])
+      .concat({
+        name: `keywords`,
+        content: keywords,
+      }
+      )
+      .concat(
+      {
+        name: `google-site-verification`,
+        content: process.env.GATSBY_GOOGLE_VERFICATION_CODE,
+        
+      }, 
+      {
+        property:`fb:app_id`,
+        content: appId
+      })
+      .concat(meta)}
+    />
       <SchemaOrg
         isBlogPost={isBlogPost}
         url={url}
         title={schemaTitle}
-        image={image}
-        description={description}
+        image={metaImage}
+        description={metaDescription}
         datePublished={datePublished}
         siteUrl={url}
         author={author}
