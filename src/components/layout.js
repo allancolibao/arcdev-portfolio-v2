@@ -4,6 +4,7 @@ import { useStaticQuery, graphql, withPrefix } from "gatsby"
 import styled from "@emotion/styled"
 import tw from 'twin.macro'
 
+import { isBrowser } from "../utils/browser"
 import Header from "./header"
 import BottomNavigation from "./bottom-nav"
 import Footer from "./footer"
@@ -38,7 +39,7 @@ const Layout = ({ children, location }) => {
     window.scrollY > 0 ? setScrolling(true) : setScrolling(false)
   }
 
-  if (typeof window !== "undefined") {
+  if (!isBrowser()) {
     require("smooth-scroll")('a[href*="#"]')
   }
 
