@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9674c61c-2f4c-4c0b-877f-d4865e319390/deploy-status)](https://app.netlify.com/sites/condescending-ardinghelli-4504ee/deploys)
+
 <p align="center">
   <a href="https://arcdev.me">
     <img alt="Arcdev V2" src="https://arcdev.me/static/ecfdddbc7c5eb967f1a916b5880e86c6/1b595/arcdev-logo.png" width="80" />
