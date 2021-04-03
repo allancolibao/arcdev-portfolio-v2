@@ -37,23 +37,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
   }
 
-  exports.onCreateWebpackConfig = ({ actions, loaders, stage }) => {
+  exports.onCreateWebpackConfig = ({ actions, stage }) => {
     if (stage === 'build-javascript') {
       actions.setWebpackConfig({
         devtool: false,
-      })
-    }
-
-    if (stage === "build-html") {
-      actions.setWebpackConfig({
-        module: {
-          rules: [
-            {
-              test: /@firebase/,
-              use: loaders.null(),
-            },
-          ],
-        },
       })
     }
   }

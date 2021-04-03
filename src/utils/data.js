@@ -2,11 +2,13 @@ import { useState, useEffect } from "react"
 import firebase from "gatsby-plugin-firebase"
 import axios from 'axios'
 
-
+import { isBrowser } from "../utils/browser"
 
 const SelectedProjects = () => {
     
     const [projects, setProjects] =  useState()
+
+    if (!isBrowser()) { return null }
 
     useEffect(() => {
         const unSubscribe = firebase
@@ -33,6 +35,8 @@ const BlogList = () => {
     
     const [blogs, setBLogs] =  useState()
     const [isLoading, setIsLoading] = useState(true)
+
+    if (!isBrowser()) { return null }
 
     useEffect(() => {
         setIsLoading(true)
@@ -62,6 +66,8 @@ const Repos = () => {
     
     const url = "https://api.github.com/users/allancolibao/repos"
     const [repo, setRepo] =  useState([])
+
+    if (!isBrowser()) { return null }
 
     useEffect(() => {
         const CancelToken = axios.CancelToken
