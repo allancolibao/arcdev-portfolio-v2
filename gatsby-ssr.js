@@ -1,7 +1,7 @@
 import "firebase/auth"
 import "firebase/firestore"
 import "firebase/functions"
-import Layout from "./src/components/layout"
+import React from "react"
 import { Helmet } from "react-helmet"
 
 
@@ -35,9 +35,3 @@ export const onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents }) =>
   })
   replaceHeadComponents(headComponents)
 }
- 
-
-export const wrapPageElement = ({ element, props }) => {
-  return <Layout {...props}>{element}</Layout>
-}
-  
