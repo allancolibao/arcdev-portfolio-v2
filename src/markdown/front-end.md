@@ -1,6 +1,7 @@
 ---
 slug: /blog/front-end
 title: Top 10 Front-End Development Tools in 2020
+date: 04-03-2021 
 ---
 
 <h1 class="text-xl md:text-3xl lg:text-4xl font-black text-gray-400 leading-tight mb-8">Top 10 Front-End Development Tools in 2020</h1>

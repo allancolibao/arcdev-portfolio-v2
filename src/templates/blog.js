@@ -17,7 +17,7 @@ import Loader from "../components/loader"
 const Template = ({data, location}) => {
 
   const { markdownRemark } = data
-  const { html } = markdownRemark
+  const { html, frontmatter } = markdownRemark
   const [ blogs, isLoading ] = BlogList()
 
   const goBack = () => {
@@ -29,7 +29,7 @@ const Template = ({data, location}) => {
   return (
     <Layout location={location}>
       {blogs ? null : <Loader/>}
-       <SEO title="Blog | Allan Colibao - Front-end Developer"/>
+       <SEO title="Blog | Allan Colibao - Front-end Developer" isBlogPost frontmatter={frontmatter}  />
        <BackButton onClick={() => goBack()} >{"<< Go back"}</BackButton>
         <div className="blog-post-container">
             <div className="blog-post block lg:flex">
@@ -178,6 +178,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         slug
+        title
+        date
       }
     }
   }

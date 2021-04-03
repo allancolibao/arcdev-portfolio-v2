@@ -1,6 +1,7 @@
 ---
 slug: /blog/self-taught
 title: How I Became a Self-Taught Front-end Developer
+date: 04-03-2021 
 ---
 
 <h1 class="text-xl md:text-3xl lg:text-4xl font-black text-gray-400 leading-tight mb-8">How I Became a Self-Taught Front-end Developer</h1>
