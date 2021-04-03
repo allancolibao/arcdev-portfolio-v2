@@ -1,6 +1,8 @@
-import { useState, useEffect }from "react"
+import { useState, useEffect } from "react"
+import "node-fetch"
 import firebase from "gatsby-plugin-firebase"
 import axios from 'axios'
+
 
 
 const SelectedProjects = () => {
