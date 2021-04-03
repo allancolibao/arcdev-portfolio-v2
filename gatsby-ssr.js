@@ -1,7 +1,7 @@
 import "firebase/auth"
 import "firebase/firestore"
 import "firebase/functions"
-import Layout from "./src/components/Layout"
+import Layout from "./src/components/layout"
 import { Helmet } from "react-helmet"
 
 
