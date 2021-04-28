@@ -16,7 +16,7 @@
 
 ## 😀 About this project
 
-This project was built using [Gatsbyjs](https://www.gatsbyjs.org/) 
+This project was built using [Gatsbyjs](https://www.gatsbyjs.org/)
 
 Full documentation for Gatsby lives [on the website](https://gatsbyjs.com/).
 
@@ -38,10 +38,9 @@ gatsby build
 
 ```
 
-### 🔎 See live 
+### 🔎 See live
 
 See [My Portfolio](https://arcdev.me).
-
 
 ## 🙏 Thank you
 

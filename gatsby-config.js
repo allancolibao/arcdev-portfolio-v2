@@ -1,4 +1,4 @@
-require('dotenv').config({ path: '.env' })
+require("dotenv").config({ path: ".env" })
 
 module.exports = {
   siteMetadata: {
@@ -8,30 +8,30 @@ module.exports = {
     siteUrl: `https://www.arcdev.me`,
     image: `/images/arcdev.png`,
     backgroundColor: `#211c42`,
-    keywords:`Allan Colibao, Arcdev, Arcdev Portfolio, Allan Colibao Portfolio, Personal Portfolio, Front-end Developer, Web Developer, Software Engineer`,
+    keywords: `Allan Colibao, Arcdev, Arcdev Portfolio, Allan Colibao Portfolio, Personal Portfolio, Front-end Developer, Web Developer, Software Engineer`,
     fbAppID: process.env.GATSBY_FB_APP_ID,
-    menuLinks:[
-        {
-          name:'Home',
-          link:'#home'
-        },
-        {
-          name:'Projects',
-          link:'#projects'
-        },
-        {
-          name:'Repository',
-          link:'#repository'
-        },
-        {
-          name:'Blog',
-          link:'#blog'
-        },
-        {
-          name:'About',
-          link:'#about'
-        }
-      ]
+    menuLinks: [
+      {
+        name: "Home",
+        link: "#home",
+      },
+      {
+        name: "Projects",
+        link: "#projects",
+      },
+      {
+        name: "Repository",
+        link: "#repository",
+      },
+      {
+        name: "Blog",
+        link: "#blog",
+      },
+      {
+        name: "About",
+        link: "#about",
+      },
+    ],
   },
   plugins: [
     {
@@ -66,16 +66,16 @@ module.exports = {
     {
       resolve: "gatsby-plugin-typography",
       options: {
-        pathToConfigModule: "src/utils/typography.js"
-      }
+        pathToConfigModule: "src/utils/typography.js",
+      },
     },
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /svgs/
-        }
-      }
+          include: /svgs/,
+        },
+      },
     },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-emotion`,
@@ -92,27 +92,26 @@ module.exports = {
           projectId: process.env.GATSBY_FIREBASE_PROJECT_ID,
           storageBucket: process.env.GATSBY_FIREBASE_STORAGE_BUCKET,
           messagingSenderId: process.env.GATSBY_FIREBASE_MESSAGING_SENDER_ID,
-          appId: process.env.GATSBY_FIREBASE_APP_ID
-        }
-      }
-    },
-      {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          name: `markdown`,
-          path: `${__dirname}/src/markdown`,
+          appId: process.env.GATSBY_FIREBASE_APP_ID,
         },
       },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown`,
+        path: `${__dirname}/src/markdown`,
+      },
+    },
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
-          threshold: 0.2,
-          once: true, 
-          disable: false,
-          rootMargin: '0% 50%',
-          
-      }
+        threshold: 0.2,
+        once: true,
+        disable: false,
+        rootMargin: "0% 50%",
+      },
     },
     `gatsby-plugin-transition-link`,
     {
@@ -123,12 +122,12 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: 'https://www.arcdev.me',
-        sitemap: 'https://www.arcdev.me/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
-    }
+        host: "https://www.arcdev.me",
+        sitemap: "https://www.arcdev.me/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
   ],
 }

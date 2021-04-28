@@ -1,27 +1,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
-import tw from 'twin.macro'
-import { keyframes } from '@emotion/core'
+import tw from "twin.macro"
+import { keyframes } from "@emotion/core"
 
-
-const Skeleton = ({count, layout}) => {
-
-    let i;
-    let elements = [];
-    for (i = 0; i < count; i++) {
-        elements.push(  
-            <Loaderbar key={i} className={layout}>
-                <LoaderEffect></LoaderEffect>
-            </Loaderbar> 
-        )
-    }
-
-    return(
-        <>
-           {elements}
-        </>
+const Skeleton = ({ count, layout }) => {
+  let i
+  let elements = []
+  for (i = 0; i < count; i++) {
+    elements.push(
+      <Loaderbar key={i} className={layout}>
+        <LoaderEffect></LoaderEffect>
+      </Loaderbar>
     )
+  }
+
+  return <>{elements}</>
 }
 
 const LoaderEffectColorOne = "#BCBCBC42"
@@ -82,8 +76,8 @@ const LoaderEffect = styled.div`
 `
 
 Skeleton.propTypes = {
-    count: PropTypes.number,
-    layout: PropTypes.string
-};
+  count: PropTypes.number,
+  layout: PropTypes.string,
+}
 
 export default Skeleton

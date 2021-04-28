@@ -1,16 +1,15 @@
-import React, {useEffect, useState}from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql, withPrefix } from "gatsby"
 import styled from "@emotion/styled"
-import tw from 'twin.macro'
+import tw from "twin.macro"
 
 import Header from "./header"
 import BottomNavigation from "./bottom-nav"
 import Footer from "./footer"
 
 const Layout = ({ children, location }) => {
-
-  const [scrolling, setScrolling] = useState(false);
+  const [scrolling, setScrolling] = useState(false)
   const isHomepage = location.pathname === withPrefix("/")
 
   const data = useStaticQuery(graphql`
@@ -27,10 +26,10 @@ const Layout = ({ children, location }) => {
   `)
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener("scroll", handleScroll)
 
     return () => {
-      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener("scroll", handleScroll)
     }
   }, [])
 
@@ -40,19 +39,20 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
-      <Header menuLinks={data.site.siteMetadata.menuLinks} 
-              isHomepage={isHomepage}  
-              scrolling={scrolling}
+      <Header
+        menuLinks={data.site.siteMetadata.menuLinks}
+        isHomepage={isHomepage}
+        scrolling={scrolling}
       />
       <Main>{children}</Main>
-      {isHomepage ? <BottomNavigation /> : ''}
+      {isHomepage ? <BottomNavigation /> : ""}
       <Footer isHomepage={isHomepage} />
     </>
   )
 }
 
 const Main = styled.main`
-    ${tw`container mx-auto w-full px-4 md:px-0`}
+  ${tw`container mx-auto w-full px-4 md:px-0`}
 `
 
 Layout.propTypes = {

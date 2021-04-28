@@ -1,22 +1,21 @@
-import React from 'react';
+import React from "react"
 import styled from "@emotion/styled"
-import tw from 'twin.macro'
-import { keyframes } from '@emotion/core'
+import tw from "twin.macro"
+import { keyframes } from "@emotion/core"
 
-import ArcdevLogo from "../images/svgs/arcdev-logo.svg";
+import ArcdevLogo from "../images/svgs/arcdev-logo.svg"
 
-const  Loader = () => (
-    <MainDiv>
-        <LoaderDiv>
-            <ArcdevLogo className="w-16 md:w-24"/>
-        </LoaderDiv>
-    </MainDiv>
-)   
-
+const Loader = () => (
+  <MainDiv>
+    <LoaderDiv>
+      <ArcdevLogo className="w-16 md:w-24" />
+    </LoaderDiv>
+  </MainDiv>
+)
 
 const MainDiv = styled.div`
-    ${tw`flex w-full h-screen fixed left-0 top-0 z-40`}
-    background-color: #211c42;
+  ${tw`flex w-full h-screen fixed left-0 top-0 z-40`}
+  background-color: #211c42;
 `
 
 const beat = keyframes`
@@ -53,4 +52,4 @@ const LoaderDiv = styled.div`
     animation: ${beat} 2s ease infinite;
 `
 
-export default Loader;
+export default Loader

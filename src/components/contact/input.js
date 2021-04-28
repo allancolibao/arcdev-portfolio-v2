@@ -1,42 +1,55 @@
-import React from 'react'
+import React from "react"
 import styled from "@emotion/styled"
-import tw from 'twin.macro'
+import tw from "twin.macro"
 
-const InputText = ({id, name, type, value, onChange, required, placeholder}) => (
-    <Input 
-        id={id} 
-        name={name} 
-        type={type} 
-        value={value} 
-        onChange={onChange} 
-        required={required}
-        placeholder={placeholder}
-    />
+const InputText = ({
+  id,
+  name,
+  type,
+  value,
+  onChange,
+  required,
+  placeholder,
+}) => (
+  <Input
+    id={id}
+    name={name}
+    type={type}
+    value={value}
+    onChange={onChange}
+    required={required}
+    placeholder={placeholder}
+  />
 )
 
-const TextAreaInput = ({id, name, value, onChange, required, placeholder, rows}) => (
-    <TextArea 
-        id={id} 
-        name={name} 
-        value={value} 
-        onChange={onChange} 
-        required={required}
-        placeholder={placeholder}
-        rows={rows}
-    />
+const TextAreaInput = ({
+  id,
+  name,
+  value,
+  onChange,
+  required,
+  placeholder,
+  rows,
+}) => (
+  <TextArea
+    id={id}
+    name={name}
+    value={value}
+    onChange={onChange}
+    required={required}
+    placeholder={placeholder}
+    rows={rows}
+  />
 )
 
-const StyledButton = ({id, label, type}) => (
-
-    <Button id={id} 
-        type={type} 
-    >
-        {label}
-    </Button>
+const StyledButton = ({ id, label, type }) => (
+  <Button id={id} type={type}>
+    {label}
+  </Button>
 )
 
 const Input = styled.input`
-    ${tw`bg-gray-100 
+  ${tw`bg-gray-100 
         text-sm
         md:text-base
         appearance-none 
@@ -56,7 +69,7 @@ const Input = styled.input`
 `
 
 const TextArea = styled.textarea`
-    ${tw`bg-gray-100 
+  ${tw`bg-gray-100 
         appearance-none 
         text-sm
         md:text-base
@@ -76,7 +89,7 @@ const TextArea = styled.textarea`
 `
 
 const Button = styled.button`
-    ${tw`text-white
+  ${tw`text-white
         shadow-sm
         text-sm
         md:text-base
@@ -95,8 +108,4 @@ const Button = styled.button`
         hover:bg-gray-700`}
 `
 
-export {
-    InputText,
-    TextAreaInput,
-    StyledButton
-}
+export { InputText, TextAreaInput, StyledButton }

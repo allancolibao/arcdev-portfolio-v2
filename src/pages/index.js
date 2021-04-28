@@ -11,22 +11,22 @@ import Projects from "../components/projects"
 import Blogs from "../components/blogs"
 import MessageButton from "../components/contact/button"
 
+const IndexPage = ({ location }) => {
+  const [projects] = SelectedProjects()
+  const [blogs] = BlogList()
+  const [repos] = Repos()
 
-const IndexPage = ({location}) => {
+  if (!isBrowser()) {
+    return null
+  }
 
-  const [ projects ] = SelectedProjects();
-  const [ blogs ] = BlogList();
-  const [ repos ] = Repos();
-
-  if (!isBrowser()){ return null }
-
-  return(
+  return (
     <Layout location={location}>
-      <SEO title="Home | Allan Colibao - Front-end Developer"/>
+      <SEO title="Home | Allan Colibao - Front-end Developer" />
       <Hero />
-      <Projects projects={projects}/>
-      <Repository repos={repos}/>
-      <Blogs blogs={blogs}/>
+      <Projects projects={projects} />
+      <Repository repos={repos} />
+      <Blogs blogs={blogs} />
       <About />
       <MessageButton location={location} />
     </Layout>

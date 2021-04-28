@@ -1,31 +1,34 @@
 import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { withPrefix } from "gatsby"
-import { keyframes } from '@emotion/core'
+import { keyframes } from "@emotion/core"
 
 import styled from "@emotion/styled"
-import tw from 'twin.macro'
+import tw from "twin.macro"
 
-import Envelope from "../../images/svgs/envelope.svg";
-import Close from "../../images/svgs/close.svg";
+import Envelope from "../../images/svgs/envelope.svg"
+import Close from "../../images/svgs/close.svg"
 
 const MessageButton = ({ location }) => {
+  const isContactPage = location.pathname === withPrefix("/contact")
 
-    const isContactPage = location.pathname === withPrefix("/contact")
-
-    return (
-        <>
-        {isContactPage ? 
+  return (
+    <>
+      {isContactPage ? (
         <AniLink cover bg="#6f36bc" direction="right" duration={1} to="/">
-            <CloseButton><Close className="w-full h-auto p-2"/></CloseButton>
+          <CloseButton>
+            <Close className="w-full h-auto p-2" />
+          </CloseButton>
         </AniLink>
-        :
+      ) : (
         <AniLink cover bg="#6f36bc" direction="left" duration={1} to="/contact">
-            <Button><Envelope className="w-full h-auto p-2"/></Button>    
-        </AniLink> 
-        }
-       </>
-    )    
+          <Button>
+            <Envelope className="w-full h-auto p-2" />
+          </Button>
+        </AniLink>
+      )}
+    </>
+  )
 }
 
 const spin = keyframes`

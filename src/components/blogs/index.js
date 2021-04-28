@@ -1,55 +1,55 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
-import tw from 'twin.macro'
+import tw from "twin.macro"
 
-import { SectionTitle, BlkHeading, Content, PostedDate} from "../text"
+import { SectionTitle, BlkHeading, Content, PostedDate } from "../text"
 import Bookmark from "../../images/svgs/bookmark.svg"
 
-
-const Blogs = ({blogs}) => (
-    <Section id="blog">
-        <SectionTitle layout="pb-6 md:pb-8 lg:pb-10" text="My Blog"/>
-        <SectionContent
-            data-sal="fade"
-            data-sal-duration="900"
-            data-sal-delay="300"
-            data-sal-easing="ease">
-            <Grid>
-                {blogs ? blogs.map((blog, i) => 
-                    <Card key={i}>
-                        <Bookmark className="hidden lg:block absolute top-0 left-0 w-16 lg:w-20 xl:w-24 h-auto"/>
-                        <BlkHeading layout="mb-1 md:mb-2" text={blog.title}/>
-                        <Content layout="mb-4" text={blog.description}/>
-                        <PostedDate text={blog.date_posted} />
-                        <View>
-                            <Link to={`/${blog.slug}`}>
-                                <ReadMore>Read more</ReadMore>
-                            </Link>
-                        </View>
-                    </Card>
-                    ) : ""
-                }
-            </Grid>
-        </SectionContent>
-    </Section>
+const Blogs = ({ blogs }) => (
+  <Section id="blog">
+    <SectionTitle layout="pb-6 md:pb-8 lg:pb-10" text="My Blog" />
+    <SectionContent
+      data-sal="fade"
+      data-sal-duration="900"
+      data-sal-delay="300"
+      data-sal-easing="ease"
+    >
+      <Grid>
+        {blogs
+          ? blogs.map((blog, i) => (
+              <Card key={i}>
+                <Bookmark className="hidden lg:block absolute top-0 left-0 w-16 lg:w-20 xl:w-24 h-auto" />
+                <BlkHeading layout="mb-1 md:mb-2" text={blog.title} />
+                <Content layout="mb-4" text={blog.description} />
+                <PostedDate text={blog.date_posted} />
+                <View>
+                  <Link to={`/${blog.slug}`}>
+                    <ReadMore>Read more</ReadMore>
+                  </Link>
+                </View>
+              </Card>
+            ))
+          : ""}
+      </Grid>
+    </SectionContent>
+  </Section>
 )
 
-
 const Section = styled.section`
-    ${tw`mb-8 md:mb-10 lg:mb-20 pt-16 md:pt-20`}
+  ${tw`mb-8 md:mb-10 lg:mb-20 pt-16 md:pt-20`}
 `
 
 const SectionContent = styled.div`
-    ${tw`flex flex-wrap`}
+  ${tw`flex flex-wrap`}
 `
 
 const Grid = styled.div`
-    ${tw`grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6`}
+  ${tw`grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6`}
 `
 
 const Card = styled.div`
-    ${tw`relative 
+  ${tw`relative 
     overflow-hidden 
     px-3 
     md:px-4 
@@ -62,11 +62,11 @@ const Card = styled.div`
     shadow-lg 
     md:shadow-xl 
     bg-purple-900`}
-    min-height: 320px;
+  min-height: 320px;
 `
 
 const View = styled.div`
-    ${tw`absolute 
+  ${tw`absolute 
     flex 
     right-0 
     bottom-0 
@@ -79,7 +79,7 @@ const View = styled.div`
 `
 
 const ReadMore = styled.button`
-    ${tw`bg-transparent 
+  ${tw`bg-transparent 
         text-purple-400
         text-xs
         lg:text-xs 

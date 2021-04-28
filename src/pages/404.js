@@ -4,21 +4,23 @@ import { Link } from "gatsby"
 import { isBrowser } from "../utils/browser"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import PageNotFound from "../images/svgs/page-not-found.svg";
+import PageNotFound from "../images/svgs/page-not-found.svg"
 
-const NotFoundPage = ({ location }) => { 
+const NotFoundPage = ({ location }) => {
+  if (!isBrowser()) {
+    return null
+  }
 
-    if (!isBrowser()){ return null }
-
-    return(
+  return (
     <Layout location={location}>
-      <SEO title="404: Not Found | Allan Colibao - Front-end Developer"/>
+      <SEO title="404: Not Found | Allan Colibao - Front-end Developer" />
       <div className="flex mx-auto items-center justify-center">
-        <PageNotFound className="h-auto my-16"/>
+        <PageNotFound className="h-auto my-16" />
       </div>
       <div className="flex mx-auto items-center justify-center">
-      <Link to="/">
-          <button className="bg-transparent 
+        <Link to="/">
+          <button
+            className="bg-transparent 
           text-purple-400
           text-xs
           lg:text-xs 
@@ -38,14 +40,14 @@ const NotFoundPage = ({ location }) => {
           focus:outline-none
           hover:border-transparent 
           hover:bg-purple-500 
-          hover:text-gray-200">
+          hover:text-gray-200"
+          >
             {"<<"} Go back to home
           </button>
         </Link>
       </div>
     </Layout>
   )
-
 }
 
 export default NotFoundPage

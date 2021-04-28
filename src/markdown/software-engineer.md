@@ -1,7 +1,7 @@
 ---
 slug: /blog/become-software-engineer
 title: 5 Things I Wish I Knew Before Becoming a Software Engineer
-date: 04-03-2021 
+date: 04-03-2021
 ---
 
 <h1 class="text-xl md:text-3xl lg:text-4xl font-black text-gray-400 leading-tight mb-8">5 Things I Wish I Knew Before Becoming a Software Engineer</h1>

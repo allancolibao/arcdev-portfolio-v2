@@ -1,21 +1,19 @@
 import React from "react"
 import styled from "@emotion/styled"
-import tw from 'twin.macro'
-import { css, keyframes } from '@emotion/core'
+import tw from "twin.macro"
+import { css, keyframes } from "@emotion/core"
 
 import Navigation from "./navigation"
 import Logo from "./logo"
 
-
 const Header = ({ menuLinks, scrolling, isHomepage }) => (
-    <Nav css={scrolling ? sticky : fixed }>
-      <Div>
-        <Logo />
-        {isHomepage ? <Navigation lists={menuLinks}/> : "" }
-        <div>
-        </div>
-      </Div>
-    </Nav>
+  <Nav css={scrolling ? sticky : fixed}>
+    <Div>
+      <Logo />
+      {isHomepage ? <Navigation lists={menuLinks} /> : ""}
+      <div></div>
+    </Div>
+  </Nav>
 )
 
 const fadeIn = keyframes`
@@ -38,7 +36,7 @@ const sticky = css`
   opacity: 0;
   animation: ${fadeIn} ease-in 1s;
   animation-fill-mode: forwards;
-  box-shadow: 0px -36px 55px -2px rgba(0,0,0,0.51);
+  box-shadow: 0px -36px 55px -2px rgba(0, 0, 0, 0.51);
 `
 
 const fixed = css`
