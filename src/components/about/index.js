@@ -42,8 +42,15 @@ const About = () => (
 
         <Heading layout="pb-1 md:pb-2" text="Experience" />
 
+        <SubHeading layout="pb-1 md:pb-2" text="Computer Programmer III" />
+        <Content text="Aug 2021 - Present" />
+        <Content
+          layout="pb-4 md:pb-6 lg:pb-10"
+          text="DOST- National Research Council of the Philippines"
+        />
+
         <SubHeading layout="pb-1 md:pb-2" text="Web Developer" />
-        <Content text="Aug 2020 - Present" />
+        <Content text="Aug 2020 - Jul 2021" />
         <Content
           layout="pb-4 md:pb-6 lg:pb-10"
           text="LandBank of the Philippines Resources 
