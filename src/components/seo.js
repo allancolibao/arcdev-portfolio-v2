@@ -102,10 +102,6 @@ function SEO({
                     content: metaImage,
                   },
                   {
-                    property: `og:image:alt`,
-                    content: title,
-                  },
-                  {
                     name: `twitter:card`,
                     content: `summary_large_image`,
                   },

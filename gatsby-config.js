@@ -5,9 +5,9 @@ module.exports = {
     title: `Allan Colibao - Front-end Developer`,
     description: `I'm Allan Reyes Colibao. I am a design-oriented front-end developer who loves to build complex interactive web applications. Welcome to my portfolio version II`,
     author: `@allancolibao`,
-    siteUrl: `https://www.arcdev.me`,
-    image: `/images/arcdev.png`,
-    backgroundColor: `#211c42`,
+    siteUrl: `https://arcdev.me`,
+    image: `/arcdev.png`,
+    backgroundColor: `#ffffff`,
     keywords: `Allan Colibao, Arcdev, Arcdev Portfolio, Allan Colibao Portfolio, Personal Portfolio, Front-end Developer, Web Developer, Software Engineer`,
     fbAppID: process.env.GATSBY_FB_APP_ID,
     menuLinks: [
@@ -61,6 +61,48 @@ module.exports = {
         theme_color: `#211c42`,
         display: `minimal-ui`,
         icon: `src/images/arcdev-logo.png`,
+        icons: [
+          {
+            src: `favicons/icon-48x48.png`,
+            sizes: `48x48`,
+            type: `image/png`,
+          },
+          {
+            src: `favicons/icon-72x72.png`,
+            sizes: `72x72`,
+            type: `image/png`,
+          },
+          {
+            src: `favicons/icon-96x96.png`,
+            sizes: `96x96`,
+            type: `image/png`,
+          },
+          {
+            src: `favicons/icon-144x144.png`,
+            sizes: `144x144`,
+            type: `image/png`,
+          },
+          {
+            src: `favicons/icon-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `favicons/icon-256x256.png`,
+            sizes: `256x256`,
+            type: `image/png`,
+          },
+          {
+            src: `favicons/icon-384x384.png`,
+            sizes: `384x384`,
+            type: `image/png`,
+          },
+          {
+            src: `favicons/icon-512x512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+        ]
       },
     },
     {
@@ -79,6 +121,18 @@ module.exports = {
     },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-emotion`,
+    { 
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true, 
+        develop: false,
+        tailwind: true, 
+        ignore: ['/custom.css', 'node_modules/gatsby-plugin-transition-link/style.css', 'node_modules/sal.js/dist/sal.css'], 
+        purgeCSSOptions: {
+          safelist: ['animate-spin'],
+        },
+      }
+    },
     {
       resolve: "gatsby-plugin-firebase",
       options: {
@@ -117,15 +171,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://www.arcdev.me`,
+        siteUrl: `https://arcdev.me`,
       },
     },
     `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://www.arcdev.me",
-        sitemap: "https://www.arcdev.me/sitemap.xml",
+        host: "https://arcdev.me",
+        sitemap: "https://arcdev.me/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
